@@ -342,6 +342,9 @@ slider-component.slider-component-full-width {
   }
 }
 
+.banner__heading {
+  font-family: var(--font-body-family);
+}
 .slider-button {
   color: rgba(var(--color-foreground), 0.75);
   background: transparent;
