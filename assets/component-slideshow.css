@@ -103,7 +103,7 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
-  height: 50%;
+  height: 100%;
 }
 
 @media screen and (min-width: 750px) {
@@ -111,6 +111,9 @@ slideshow-component .slideshow.banner {
     height: 50%;
     padding: 5rem;
   }
+  .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
+  height: 50%;
+}
 }
 
 .slideshow__controls {
