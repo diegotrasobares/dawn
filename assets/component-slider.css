@@ -229,7 +229,9 @@ slider-component.slider-component-full-width {
   width: 0.4rem;
   display: none;
 }
-
+.slideshow__media{
+  filter: contrast(0.5);
+}
 .slider::-webkit-scrollbar-thumb {
   background-color: rgb(var(--color-foreground));
   border-radius: 0.4rem;
