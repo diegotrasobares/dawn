@@ -4,17 +4,6 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-    .slider-buttons{
-      display: flex;
-    border: 0;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    align-items: center;
-    justify-content: space-between;
-    }
       .slider-button {
       position: absolute;
       top: 50%;
@@ -27,6 +16,18 @@
 
     .slider-button--next {
       right: 10px;
+    }
+
+    .slider-buttons{
+      display: flex;
+    border: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
     }
 
     @media screen and (max-width: 749px) {
