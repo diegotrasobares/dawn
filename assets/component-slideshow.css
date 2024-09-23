@@ -108,6 +108,7 @@ slideshow-component .slideshow.banner {
 
 @media screen and (max-width: 749px) {
   .slideshow__text-wrapper.banner__content {
+    height: 50%;
     padding: 5rem;
   }
   .slideshow__slide {
