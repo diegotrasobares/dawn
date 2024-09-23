@@ -314,7 +314,7 @@ slider-component.slider-component-full-width {
 .slider-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 100%;
   border:0;
