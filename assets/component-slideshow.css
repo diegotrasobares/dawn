@@ -47,6 +47,8 @@ slideshow-component .slideshow.banner {
 @media screen and (max-width: 749px) {
 .slideshow__text.banner__box {
   text-align:center;
+    align-items:center;
+
   max-width: 52.5rem;
 }
 
