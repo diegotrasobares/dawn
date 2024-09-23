@@ -18,7 +18,7 @@
       right: 10px;
     }
 
-    .slider-buttons{
+    .slider-buttons-custom{
     display: flex;
     border: 0;
     width: 100%;
@@ -58,7 +58,7 @@
   aria-label="{{ section.settings.accessibility_info | escape }}"
 >
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
-    <div class="slideshow__controls slideshow__controls--top slider-buttons">
+    <div class="slideshow__controls slideshow__controls--top slider-buttons-custom">
       <button type="button" class="slider-button slider-button--prev" ...></button>
       <button type="button" class="slider-button slider-button--next" ...></button>
     </div>
