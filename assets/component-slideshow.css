@@ -190,7 +190,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 
 .slideshow__autoplay:hover .svg-wrapper {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .slideshow__autoplay--paused .icon-pause,
