@@ -4,20 +4,28 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-      .slider-button {
+    /* Posicionar las flechas sobre la imagen */
+    .slider-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 10;
+      z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor visibilidad */
+      color: white; /* Color de las flechas */
+      border: none; /* Quitar borde a los botones */
+      padding: 10px; /* Añadir padding para agrandar el área clicable */
+      cursor: pointer;
     }
+
     .slider-button--prev {
-      left: 10px;
+      left: 10px; /* Flecha izquierda */
     }
 
     .slider-button--next {
-      right: 10px;
+      right: 10px; /* Flecha derecha */
     }
 
+    /* Ajustes para pantallas pequeñas */
     @media screen and (max-width: 749px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
