@@ -111,6 +111,9 @@ slideshow-component .slideshow.banner {
     height: 50%;
     padding: 5rem;
   }
+  .slideshow__slide {
+    height:0px;
+  }
 
   .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
     height: 50%; 
