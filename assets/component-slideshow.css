@@ -101,12 +101,12 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
-  height: 100%;
+  height: 50%;
 }
 
 @media screen and (min-width: 750px) {
   .slideshow__text-wrapper.banner__content {
-    height: 100%;
+    height: 50%;
     padding: 5rem;
   }
 }
