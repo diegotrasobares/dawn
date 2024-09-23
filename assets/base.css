@@ -3590,6 +3590,12 @@ details-disclosure > details {
 .progress-bar .progress-bar-value {
   display: block;
 }
+ .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
 
 @keyframes indeterminateAnimation {
   0% {
