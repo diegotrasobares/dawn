@@ -16,6 +16,7 @@ slideshow-component .slideshow.banner {
   padding: 0;
   position: relative;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   visibility: visible;
 }
