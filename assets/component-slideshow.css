@@ -72,7 +72,7 @@ slideshow-component .slideshow.banner {
   }
 
   .banner--mobile-bottom .slideshow__text.banner__box {
-    height: 50%;
+    height: 100%;
   }
 
   .banner--mobile-bottom .slideshow__text .button {
@@ -103,7 +103,7 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
-  height: 50%;
+  height: 100%;
 }
 
 @media screen and (min-width: 750px) {
