@@ -36,6 +36,7 @@ slideshow-component .slideshow.banner {
 .slideshow__text.banner__box {
   display: flex;
   flex-direction: column;
+  background-color:transparent;
   justify-content: center;
   max-width: 54.5rem;
 }
@@ -190,7 +191,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 
 .slideshow__autoplay:hover .svg-wrapper {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .slideshow__autoplay--paused .icon-pause,
