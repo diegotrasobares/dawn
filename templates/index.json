@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/listening-to-music.jpg",
+            "h3_heading": "Feel The Rhythm",
             "heading": "Inspired Design & Quality Sound With Beats",
             "heading_size": "h0",
             "subheading": "Love what you listen, listen to what you love. Music speaks when words don’t. Make it clear. Let music reach your heart.",
@@ -34,6 +35,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/boots-on-blue.jpg",
+            "h3_heading": "Your H3 Text",
             "heading": "Image slide",
             "heading_size": "h0",
             "subheading": "Tell your brand's story through images",
