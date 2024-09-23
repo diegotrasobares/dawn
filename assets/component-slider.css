@@ -315,6 +315,9 @@ slider-component.slider-component-full-width {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  border:0;
    position: absolute;
       top: 50%;
       transform: translateY(-50%);
