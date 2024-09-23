@@ -15,7 +15,7 @@
         "slide_kMjacV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/model-in-neutral-colors-by-window.jpg",
+            "image": "shopify://shop_images/listening-to-music.jpg",
             "heading": "Inspired Design & Quality Sound With Beats",
             "heading_size": "h0",
             "subheading": "Love what you listen, listen to what you love. Music speaks when words don’t. Make it clear. Let music reach your heart.",
@@ -26,7 +26,7 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-3",
             "text_alignment_mobile": "center"
           }
         },
