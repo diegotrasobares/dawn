@@ -112,7 +112,7 @@ slideshow-component .slideshow.banner {
     padding: 5rem;
   }
   .slideshow__slide {
-    height:0px;
+    height:100%;
   }
 
   .slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {
