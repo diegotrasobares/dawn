@@ -355,7 +355,10 @@ slider-component.slider-component-full-width {
   align-items: center;
   justify-content: center;
 }
-
+.slider-button svg {
+    width: 44px;
+  height: 44px;
+}
 .slider-button:not([disabled]):hover {
   color: rgb(var(--color-foreground));
 }
