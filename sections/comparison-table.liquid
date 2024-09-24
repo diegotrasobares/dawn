@@ -12,7 +12,7 @@
     color: black;
     border-radius: 10px;
     padding: 20px;
-    margin:1rem;
+    margin:2rem;
   }
 
   .table-header {
@@ -93,14 +93,14 @@
           <td class="feature">{{ feature.settings.feature_name }}</td>
           <td class="feature-status">
             {%- if section.settings.icon_check != blank -%}
-              <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
+              <svg src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </td>
           <td class="feature-status">
             {%- if section.settings.icon_x != blank -%}
-              <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
+              <svg src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
