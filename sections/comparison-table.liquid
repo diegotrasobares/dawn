@@ -65,56 +65,58 @@
 {%- endstyle -%}
 
 <div class="comparison-table">
-  <table>
-    <thead class="table-header">
-      <tr>
-        <th></th>
-        <th class="product-name">
-          {%- if section.settings.logo != blank -%}
-            {%- assign logo_widths = '160, 240, 320, 480, 640' -%}
-            {%- capture logo_sizes -%}
+  <div class="page-width">
+    <table>
+      <thead class="table-header">
+        <tr>
+          <th></th>
+          <th class="product-name">
+            {%- if section.settings.logo != blank -%}
+              {%- assign logo_widths = '160, 240, 320, 480, 640' -%}
+              {%- capture logo_sizes -%}
               (min-width: 750px) 200px,
               (min-width: 500px) 120px,
               120px
             {%- endcapture -%}
-            <img
-              src="{{ section.settings.logo | image_url: width: 640 }}"
-              sizes="{{ logo_sizes }}"
-              srcset="{{ section.settings.logo | image_url: width: 120 }} 120w, {{ section.settings.logo | image_url: width: 160 }} 160w, {{ section.settings.logo | image_url: width: 240 }} 240w, {{ section.settings.logo | image_url: width: 320 }} 320w, {{ section.settings.logo | image_url: width: 480 }} 480w, {{ section.settings.logo | image_url: width: 640 }} 640w"
-              alt="Logo"
-              class="logo"
-            >
-          {%- else -%}
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-        </th>
-        <th class="other-product-name">
-          <p>{{ section.settings.other_product_name }}</p>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      {%- for feature in section.blocks -%}
-        <tr class="comparison-row">
-          <td class="feature">{{ feature.settings.feature_name }}</td>
-          <td class="feature-status">
-            {%- if section.settings.icon_check != blank -%}
-              <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
+              <img
+                src="{{ section.settings.logo | image_url: width: 640 }}"
+                sizes="{{ logo_sizes }}"
+                srcset="{{ section.settings.logo | image_url: width: 120 }} 120w, {{ section.settings.logo | image_url: width: 160 }} 160w, {{ section.settings.logo | image_url: width: 240 }} 240w, {{ section.settings.logo | image_url: width: 320 }} 320w, {{ section.settings.logo | image_url: width: 480 }} 480w, {{ section.settings.logo | image_url: width: 640 }} 640w"
+                alt="Logo"
+                class="logo"
+              >
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
-          </td>
-          <td class="feature-status">
-            {%- if section.settings.icon_x != blank -%}
-              <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
-            {%- else -%}
-              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- endif -%}
-          </td>
+          </th>
+          <th class="other-product-name">
+            <p>{{ section.settings.other_product_name }}</p>
+          </th>
         </tr>
-      {%- endfor -%}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {%- for feature in section.blocks -%}
+          <tr class="comparison-row">
+            <td class="feature">{{ feature.settings.feature_name }}</td>
+            <td class="feature-status">
+              {%- if section.settings.icon_check != blank -%}
+                <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </td>
+            <td class="feature-status">
+              {%- if section.settings.icon_x != blank -%}
+                <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
 </div>
 
 {% schema %}
