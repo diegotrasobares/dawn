@@ -67,14 +67,23 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.carousel-track');
-    const testimonials = track.children;
+  document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector('.carousel');
+    const wrapperWidth = document.querySelector('.carousel-wrapper').offsetWidth;
+    const testimonials = carousel.children;
+    const totalTestimonials = testimonials.length;
 
-    // Duplicar los testimonios para asegurarnos de que hay suficientes en pantallas grandes
-    for (let i = 0; i < testimonials.length; i++) {
-      track.appendChild(testimonials[i].cloneNode(true));
+    // Duplicamos los testimonios para crear un efecto de carrusel infinito
+    for (let i = 0; i < totalTestimonials; i++) {
+      let clone = testimonials[i].cloneNode(true);
+      carousel.appendChild(clone);
     }
+
+    // Ajustar la velocidad del scroll basado en la cantidad de testimonios
+    const totalWidth = carousel.scrollWidth;
+    const scrollTime = totalWidth / wrapperWidth * 8; // Ajustar la duración en segundos
+
+    carousel.style.animationDuration = `${scrollTime}s`;
   });
 </script>
 
