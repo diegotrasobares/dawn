@@ -4,6 +4,9 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
+    .header-container{
+      display:flex;
+    }
     .slider-button--prev {
       left: 10px;
     }
