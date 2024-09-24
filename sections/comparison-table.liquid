@@ -7,94 +7,87 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
   }
-  .table-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .logo-section img {
-    width: 80px;
-  }
-  .product-name, .other-product-name {
-    flex: 1;
+  .comparison-table th, .comparison-table td {
+    padding: 10px;
     text-align: center;
-  }
-  h2 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #ffeb3b;
-  }
-  .comparison-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  .comparison-row:last-child {
-    border-bottom: none;
+  .comparison-table th {
+    background-color: #444;
+    color: #ffeb3b;
+    font-weight: 700;
   }
-  .feature {
-    flex: 2;
+  .comparison-table .logo {
+    width: 80px;
+    vertical-align: middle;
+  }
+  .comparison-table .feature {
     text-align: left;
-    font-size: 16px;
   }
-  .feature-status {
-    flex: 1;
-    text-align: center;
-  }
-  .icon {
+  .comparison-table .icon {
     width: 24px;
     height: 24px;
+  }
+  .comparison-table .no-border {
+    border: none;
+  }
+  .comparison-table .no-border td {
+    border: none;
   }
 {%- endstyle -%}
 
 <div class="comparison-table">
-  <div class="table-header">
-    <div class="product-name">
-      {%- if section.settings.logo != blank -%}
-        {%- assign logo_widths = '80, 160, 240, 320, 480, 640' -%}
-        {%- capture logo_sizes -%}
-          (min-width: 750px) 160px,
-          (min-width: 500px) 80px,
-          80px
-        {%- endcapture -%}
-        <img
-          src="{{ section.settings.logo | image_url: width: 640 }}"
-          sizes="{{ logo_sizes }}"
-          srcset="{{ section.settings.logo | image_url: width: 80 }} 80w, {{ section.settings.logo | image_url: width: 160 }} 160w, {{ section.settings.logo | image_url: width: 240 }} 240w, {{ section.settings.logo | image_url: width: 320 }} 320w, {{ section.settings.logo | image_url: width: 480 }} 480w, {{ section.settings.logo | image_url: width: 640 }} 640w"
-          alt="Logo"
-          class="logo"
-        >
-      {%- else -%}
-        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    </div>
-    <div class="other-product-name">
-      <h2>{{ section.settings.other_product_name }}</h2>
-    </div>
-  </div>
-  {%- for feature in section.blocks -%}
-    <div class="comparison-row">
-      <div class="feature">{{ feature.settings.feature_name }}</div>
-      <div class="feature-status">
-        {%- if section.settings.icon_check != blank -%}
-          <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
-        {%- else -%}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-      </div>
-      <div class="feature-status">
-        {%- if section.settings.icon_x != blank -%}
-          <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
-        {%- else -%}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-      </div>
-    </div>
-  {%- endfor -%}
+  <table>
+    <thead>
+      <tr>
+        <th class="logo">
+          {%- if section.settings.logo != blank -%}
+            {%- assign logo_widths = '80, 160, 240, 320, 480, 640' -%}
+            {%- capture logo_sizes -%}
+              (min-width: 750px) 160px,
+              (min-width: 500px) 80px,
+              80px
+            {%- endcapture -%}
+            <img
+              src="{{ section.settings.logo | image_url: width: 640 }}"
+              sizes="{{ logo_sizes }}"
+              srcset="{{ section.settings.logo | image_url: width: 80 }} 80w, {{ section.settings.logo | image_url: width: 160 }} 160w, {{ section.settings.logo | image_url: width: 240 }} 240w, {{ section.settings.logo | image_url: width: 320 }} 320w, {{ section.settings.logo | image_url: width: 480 }} 480w, {{ section.settings.logo | image_url: width: 640 }} 640w"
+              alt="Logo"
+              class="logo"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </th>
+        <th>
+          <h2>{{ section.settings.other_product_name }}</h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for feature in section.blocks -%}
+        <tr>
+          <td class="feature">{{ feature.settings.feature_name }}</td>
+          <td class="feature-status">
+            {%- if section.settings.icon_check != blank -%}
+              <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </td>
+          <td class="feature-status">
+            {%- if section.settings.icon_x != blank -%}
+              <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </td>
+        </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
 </div>
 
 {% schema %}
