@@ -1,7 +1,12 @@
 slider-component {
   --desktop-margin-left-first-item: max(
     5rem,
-    calc((100vw - var(--page-width) + 10rem - var(--grid-desktop-horizontal-spacing)) / 2)
+    calc(
+      (
+          100vw - var(--page-width) + 10rem -
+            var(--grid-desktop-horizontal-spacing)
+        ) / 2
+    )
   );
   position: relative;
   display: block;
@@ -16,9 +21,9 @@ slider-component.slider-component-full-width {
     padding: 0 1.5rem;
   }
 }
-    .header-container{
-      display:flex;
-    }
+.header-container {
+  display: flex;
+}
 
 @media screen and (min-width: 749px) and (max-width: 990px) {
   slider-component.page-width {
@@ -28,8 +33,14 @@ slider-component.slider-component-full-width {
 
 .slider__slide {
   --focus-outline-padding: 0.5rem;
-  --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
-  --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
+  --shadow-padding-top: calc(
+    (var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) *
+      var(--shadow-visible)
+  );
+  --shadow-padding-bottom: calc(
+    (var(--shadow-vertical-offset) + var(--shadow-blur-radius)) *
+      var(--shadow-visible)
+  );
   scroll-snap-align: start;
   flex-shrink: 0;
   padding-bottom: 0;
@@ -49,7 +60,7 @@ slider-component.slider-component-full-width {
 
   /* Fix to show some space at the end of our sliders in all browsers */
   .slider--mobile:after {
-    content: '';
+    content: "";
     width: 0;
     padding-left: 1.5rem;
   }
@@ -57,10 +68,14 @@ slider-component.slider-component-full-width {
   .slider.slider--mobile .slider__slide {
     margin-bottom: 0;
     padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
-    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+    padding-bottom: max(
+      var(--focus-outline-padding),
+      var(--shadow-padding-bottom)
+    );
   }
 
-  .slider.slider--mobile.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+  .slider.slider--mobile.contains-card--standard
+    .slider__slide:not(.collection-list__item--no-media) {
     padding-bottom: var(--focus-outline-padding);
   }
 
@@ -99,7 +114,7 @@ slider-component.slider-component-full-width {
 
   /* Fix to show some space at the end of our sliders in all browsers */
   .slider--tablet:after {
-    content: '';
+    content: "";
     width: 0;
     padding-left: 1.5rem;
     margin-left: calc(-1 * var(--grid-desktop-horizontal-spacing));
@@ -108,10 +123,14 @@ slider-component.slider-component-full-width {
   .slider.slider--tablet .slider__slide {
     margin-bottom: 0;
     padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
-    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+    padding-bottom: max(
+      var(--focus-outline-padding),
+      var(--shadow-padding-bottom)
+    );
   }
 
-  .slider.slider--tablet.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+  .slider.slider--tablet.contains-card--standard
+    .slider__slide:not(.collection-list__item--no-media) {
     padding-bottom: var(--focus-outline-padding);
   }
 
@@ -153,7 +172,7 @@ slider-component.slider-component-full-width {
 
   /* Fix to show some space at the end of our sliders in all browsers */
   .slider--desktop:after {
-    content: '';
+    content: "";
     width: 0;
     padding-left: 5rem;
     margin-left: calc(-1 * var(--grid-desktop-horizontal-spacing));
@@ -162,7 +181,10 @@ slider-component.slider-component-full-width {
   .slider.slider--desktop .slider__slide {
     margin-bottom: 0;
     padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
-    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+    padding-bottom: max(
+      var(--focus-outline-padding),
+      var(--shadow-padding-bottom)
+    );
   }
 
   .slider--desktop .slider__slide:first-child {
@@ -185,26 +207,42 @@ slider-component.slider-component-full-width {
   }
 
   .slider--desktop.grid--5-col-desktop .grid__item {
-    width: calc((100% - var(--desktop-margin-left-first-item)) / 5 - var(--grid-desktop-horizontal-spacing) * 2);
+    width: calc(
+      (100% - var(--desktop-margin-left-first-item)) / 5 -
+        var(--grid-desktop-horizontal-spacing) * 2
+    );
   }
 
   .slider--desktop.grid--4-col-desktop .grid__item {
-    width: calc((100% - var(--desktop-margin-left-first-item)) / 4 - var(--grid-desktop-horizontal-spacing) * 3);
+    width: calc(
+      (100% - var(--desktop-margin-left-first-item)) / 4 -
+        var(--grid-desktop-horizontal-spacing) * 3
+    );
   }
 
   .slider--desktop.grid--3-col-desktop .grid__item {
-    width: calc((100% - var(--desktop-margin-left-first-item)) / 3 - var(--grid-desktop-horizontal-spacing) * 4);
+    width: calc(
+      (100% - var(--desktop-margin-left-first-item)) / 3 -
+        var(--grid-desktop-horizontal-spacing) * 4
+    );
   }
 
   .slider--desktop.grid--2-col-desktop .grid__item {
-    width: calc((100% - var(--desktop-margin-left-first-item)) / 2 - var(--grid-desktop-horizontal-spacing) * 5);
+    width: calc(
+      (100% - var(--desktop-margin-left-first-item)) / 2 -
+        var(--grid-desktop-horizontal-spacing) * 5
+    );
   }
 
   .slider--desktop.grid--1-col-desktop .grid__item {
-    width: calc((100% - var(--desktop-margin-left-first-item)) - var(--grid-desktop-horizontal-spacing) * 9);
+    width: calc(
+      (100% - var(--desktop-margin-left-first-item)) -
+        var(--grid-desktop-horizontal-spacing) * 9
+    );
   }
 
-  .slider.slider--desktop.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+  .slider.slider--desktop.contains-card--standard
+    .slider__slide:not(.collection-list__item--no-media) {
     padding-bottom: var(--focus-outline-padding);
   }
 
@@ -222,7 +260,8 @@ slider-component.slider-component-full-width {
 /* Scrollbar */
 
 .slider {
-  scrollbar-color: rgb(var(--color-foreground)) rgba(var(--color-foreground), 0.04);
+  scrollbar-color: rgb(var(--color-foreground))
+    rgba(var(--color-foreground), 0.04);
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -232,7 +271,17 @@ slider-component.slider-component-full-width {
   width: 0.4rem;
   display: none;
 }
-.slideshow__media{
+.slideshow__media {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
   filter: contrast(0.5);
 }
 .slider::-webkit-scrollbar-thumb {
@@ -322,11 +371,11 @@ slider-component.slider-component-full-width {
   justify-content: space-between;
   width: 100%;
   max-width: 100%;
-  border:0;
-   position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 @media screen and (min-width: 990px) {
@@ -357,13 +406,12 @@ slider-component.slider-component-full-width {
   cursor: pointer;
   width: 64px;
   height: 64px;
-  padding-left:1rem;
-  padding-right:1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .slider-button:not([disabled]):hover {
   color: rgb(var(--color-foreground));
