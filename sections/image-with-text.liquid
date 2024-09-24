@@ -64,7 +64,7 @@
             id="ImageWithText--{{ section.id }}"
             class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
-            {%- if block.settings.h3_heading != blank -%}
+            {%- if block.settings.h3_image_with_text != blank -%}
               <div class="header-container">
                 <h3 class="banner__subheading">
                   {{ block.settings.h3_image_with_text }}
