@@ -336,6 +336,9 @@
     border-right: 0;
   }
 }
+.image-with-text__media {
+  border-radius: 10px;
+}
 
 .image-with-text:not(.collapse-corners, .image-with-text--overlap)
   .image-with-text__media-item {
