@@ -13,20 +13,24 @@
   }
 
   .carousel-wrapper {
-    overflow: hidden;
+    overflow: hidden; /* Oculta los testimonios que están fuera del área visible */
     position: relative;
+    width: 100%;
   }
 
   .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: none; /* Eliminamos la transición controlada manualmente */
+    will-change: transform;
+    animation: scroll 20s linear infinite; /* Desplazamiento continuo */
   }
 
   .testimonial {
-    flex: 0 0 100%;
-    padding: 20px;
+    min-width: 200px; /* El tamaño mínimo de cada testimonio, ajustable */
+    margin: 0 10px; /* Espacio entre testimonios */
     box-sizing: border-box;
     text-align: center;
+    flex-shrink: 0; /* Evita que se reduzcan los testimonios en pantallas pequeñas */
   }
 
   .testimonial img {
@@ -51,6 +55,16 @@
   .testimonial .stars {
     margin-top: 5px;
     color: #f39c12;
+  }
+
+  /* Definimos la animación para el scroll infinito */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 {%- endstyle -%}
 
@@ -77,19 +91,21 @@
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const carousel = document.querySelector('.carousel');
-    let currentIndex = 0;
-    const totalTestimonials = carousel.children.length;
+    const wrapperWidth = document.querySelector('.carousel-wrapper').offsetWidth;
+    const testimonials = carousel.children;
+    const totalTestimonials = testimonials.length;
 
-    function moveCarousel() {
-      currentIndex++;
-      if (currentIndex === totalTestimonials) {
-        currentIndex = 0;
-      }
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // Duplicamos los testimonios para crear un efecto de carrusel infinito
+    for (let i = 0; i < totalTestimonials; i++) {
+      let clone = testimonials[i].cloneNode(true);
+      carousel.appendChild(clone);
     }
 
-    // Move the carousel every 3 seconds
-    setInterval(moveCarousel, 3000);
+    // Ajustar la velocidad del scroll basado en la cantidad de testimonios
+    const totalWidth = carousel.scrollWidth;
+    const scrollTime = totalWidth / wrapperWidth * 20; // Ajustar la duración en segundos
+
+    carousel.style.animationDuration = `${scrollTime}s`;
   });
 </script>
 
