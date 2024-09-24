@@ -16,18 +16,18 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/S2587c3ff649d4bdda92c5776397d8c5b7.jpg",
-            "h3_heading": "Feel The Rhythm",
-            "heading": "Inspired Design & Quality Sound With Beats",
+            "h3_heading": "Feel The Comfort",
+            "heading": "Enhance Your Travels with Our Versatile Travel Pillow.",
             "heading_size": "h0",
-            "subheading": "Love what you listen, listen to what you love. Music speaks when words don’t. Make it clear. Let music reach your heart.",
-            "button_label": "Button label",
+            "subheading": "Upgrade Your Sleep on-the-go with the Convenient Refillable Clothes Travel Pillow.",
+            "button_label": "Shop Now",
             "link": "shopify://products/the-collection-snowboard-liquid",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "scheme-3",
+            "color_scheme": "scheme-2",
             "text_alignment_mobile": "center"
           }
         },
@@ -61,7 +61,7 @@
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
