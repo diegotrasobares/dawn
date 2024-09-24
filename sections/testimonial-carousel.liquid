@@ -1,5 +1,4 @@
 {%- style -%}
-  /* testimonial-carousel.css */
   .testimonial-carousel {
     max-width: 100%;
     margin: auto;
@@ -14,7 +13,7 @@
   }
 
   .carousel-wrapper {
-    overflow: hidden; /* Oculta los testimonios que están fuera del área visible */
+    overflow: hidden;
     position: relative;
     width: 100%;
   }
@@ -26,11 +25,11 @@
   }
 
   .testimonial {
-    min-width: 200px; /* El tamaño mínimo de cada testimonio, ajustable */
-    margin: 0 10px; /* Espacio entre testimonios */
+    min-width: 200px;
+    margin: 0 10px;
     box-sizing: border-box;
     text-align: center;
-    flex-shrink: 0; /* Evita que se reduzcan los testimonios en pantallas pequeñas */
+    flex-shrink: 0;
   }
 
   .testimonial img, .testimonial svg {
@@ -57,7 +56,6 @@
     color: #f39c12;
   }
 
-  /* Definimos la animación para el scroll infinito */
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -124,7 +122,7 @@
 
     // Ajustar la velocidad del scroll basado en la cantidad de testimonios
     const totalWidth = carousel.scrollWidth;
-    const scrollTime = totalWidth / wrapperWidth * 8; // Ajustar la duración en segundos
+    const scrollTime = totalWidth / wrapperWidth * 5; // Ajustar la duración en segundos
 
     carousel.style.animationDuration = `${scrollTime}s`;
   });
