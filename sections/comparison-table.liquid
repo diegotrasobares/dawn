@@ -83,7 +83,7 @@
         {%- if section.settings.icon_check != blank -%}
           <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
         {%- else -%}
-          {{ 'placeholder-icon-check.svg' | placeholder_svg_tag: 'Check placeholder' }}
+          {{ 'placeholder-svg' | placeholder_svg_tag: 'Check placeholder' }}
         {%- endif -%}
       </div>
       <div class="feature-status">
