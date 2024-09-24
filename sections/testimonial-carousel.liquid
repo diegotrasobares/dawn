@@ -1,63 +1,36 @@
 {%- style -%}
   .testimonial-carousel {
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-    margin: 2rem 0 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
   }
 
-  .testimonial-carousel h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-
-  .carousel-wrapper {
-    overflow: hidden; /* Oculta los testimonios que están fuera del área visible */
-    position: relative;
-    width: 100%;
-  }
-
-  .carousel {
+  .carousel-container {
     display: flex;
-    transition: none; /* Eliminamos la transición controlada manualmente */
-    will-change: transform;
-    animation: scroll 20s linear infinite; /* Desplazamiento continuo */
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
   }
 
   .testimonial {
-    min-width: 200px; /* El tamaño mínimo de cada testimonio, ajustable */
-    margin: 0 10px; /* Espacio entre testimonios */
-    box-sizing: border-box;
+    display: inline-block;
     text-align: center;
-    flex-shrink: 0; /* Evita que se reduzcan los testimonios en pantallas pequeñas */
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    padding: 10px;
   }
 
-  .testimonial img, .testimonial svg {
+  .testimonial img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
   }
 
-  .testimonial p {
-    font-size: 1rem;
-    color: #666;
-  }
-
-  .testimonial .name {
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #333;
-  }
-
-  .testimonial .stars {
-    margin-top: 5px;
-    color: #f39c12;
-  }
-
-  /* Definimos la animación para el scroll infinito */
+  /* Keyframes para la animación infinita */
   @keyframes scroll {
     0% {
       transform: translateX(0);
