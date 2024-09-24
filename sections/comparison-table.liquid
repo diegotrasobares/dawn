@@ -7,7 +7,7 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-collapse: collapse;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
   }
 
   .table-header {
@@ -29,11 +29,11 @@
   }
 
   .comparison-row {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Agrega borde superior solo en las filas */
   }
 
-  .comparison-row:last-child {
-    border-bottom: none;
+  .comparison-row:first-of-type {
+    border-top: none; /* Quita el borde superior en la primera fila */
   }
 
   .feature {
@@ -57,7 +57,6 @@
   <table>
     <thead class="table-header">
       <tr>
-        <th></th>
         <th class="product-name">
           {%- if section.settings.logo != blank -%}
             {%- assign logo_widths = '80, 160, 240, 320, 480, 640' -%}
