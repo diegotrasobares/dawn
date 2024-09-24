@@ -93,14 +93,14 @@
           <td class="feature">{{ feature.settings.feature_name }}</td>
           <td class="feature-status">
             {%- if section.settings.icon_check != blank -%}
-              <svg src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
+              <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </td>
           <td class="feature-status">
             {%- if section.settings.icon_x != blank -%}
-              <svg src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
+              <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
