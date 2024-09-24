@@ -53,6 +53,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image with text",
+            "h3_heading": "hola",
             "heading_size": "h1"
           }
         },
