@@ -65,7 +65,9 @@
             class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
             <div class="header-container">
-              <h3 class="banner__subheading">Just a try</h3>
+              <h3 class="banner__subheading">
+                {{ block.settings.h3_image_with_text }}
+              </h3>
               <span class="add-line" />
             </div>
             {%- for block in section.blocks -%}
