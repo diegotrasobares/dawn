@@ -90,7 +90,7 @@
         {%- if section.settings.icon_x != blank -%}
           <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
         {%- else -%}
-          {{ 'placeholder-icon-x.svg' | placeholder_svg_tag: 'X placeholder' }}
+          {{ 'placeholder-svg' | placeholder_svg_tag: 'X placeholder' }}
         {%- endif -%}
       </div>
     </div>
