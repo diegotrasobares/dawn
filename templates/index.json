@@ -207,6 +207,7 @@
           "settings": {
             "image": "shopify://shop_images/brushing-on-makeup-foundation.jpg",
             "review": "This product is amazing!",
+            "name": "John Doe",
             "stars": 4
           }
         },
@@ -215,13 +216,16 @@
           "settings": {
             "image": "shopify://shop_images/woman-facepainted-canada-day.jpg",
             "review": "This product is amazing!",
+            "name": "John Doe",
             "stars": 5
           }
         },
         "testimonial_7UKgDF": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/woman-holds-her-hand-to-her-cheek.jpg",
             "review": "This product is amazing!",
+            "name": "John Doe",
             "stars": 5
           }
         }
@@ -232,6 +236,7 @@
         "testimonial_7UKgDF"
       ],
       "settings": {
+        "title": "Testimonials"
       }
     }
   },
