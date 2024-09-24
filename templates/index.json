@@ -93,10 +93,38 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "comparison_table_dqpCyB": {
+      "type": "comparison-table",
+      "blocks": {
+        "comparison_row_GNeQD9": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Feature"
+          }
+        },
+        "comparison_row_iKTHGp": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Feature",
+            "icon_check": "shopify://shop_images/all_for_sleep_store_since_2024__2_-removebg-preview_efd00dd9-032c-4373-bb6c-ae8948dc97b2.png"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_row_GNeQD9",
+        "comparison_row_iKTHGp"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/all_for_sleep_store_since_2024__2_-removebg-preview_efd00dd9-032c-4373-bb6c-ae8948dc97b2.png",
+        "product_name": "WaveBeamPro",
+        "other_product_name": "Other Headlamps"
+      }
     }
   },
   "order": [
     "home_slideshow_96ti7e",
-    "image_with_text_EaKg4z"
+    "image_with_text_EaKg4z",
+    "comparison_table_dqpCyB"
   ]
 }
