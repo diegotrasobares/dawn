@@ -1,9 +1,10 @@
 {%- style -%}
+  /* testimonial-carousel.css */
   .testimonial-carousel {
-    max-width: 1000px;
+    max-width: 100%;
     margin: auto;
     text-align: center;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
   .testimonial-carousel h2 {
@@ -20,9 +21,8 @@
 
   .carousel {
     display: flex;
-    transition: none; /* Eliminamos la transición controlada manualmente */
     will-change: transform;
-    animation: scroll 20s linear infinite; /* Desplazamiento continuo */
+    animation: scroll 20s linear infinite;
   }
 
   .testimonial {
@@ -63,7 +63,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
 {%- endstyle -%}
@@ -79,7 +79,24 @@
           {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
-          <p>{{ testimonial.settings.review }}</p>
+          <p class="review">{{ testimonial.settings.review }}</p>
+          <div class="name">{{ testimonial.settings.name }}</div>
+          <div class="stars">
+            {%- for star in (1..testimonial.settings.stars) -%}
+              &#9733;
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endfor -%}
+      <!-- Clonar testimonios para llenar el espacio -->
+      {%- for testimonial in section.blocks -%}
+        <div class="testimonial">
+          {%- if testimonial.settings.image != blank -%}
+            <img src="{{ testimonial.settings.image | image_url: width: 80 }}" alt="{{ testimonial.settings.name }}">
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          <p class="review">{{ testimonial.settings.review }}</p>
           <div class="name">{{ testimonial.settings.name }}</div>
           <div class="stars">
             {%- for star in (1..testimonial.settings.stars) -%}
