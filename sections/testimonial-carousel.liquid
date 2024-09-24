@@ -75,6 +75,9 @@
       {%- for testimonial in section.blocks -%}
         <div class="testimonial">
           <img src="{{ testimonial.settings.image | image_url: width: 80 }}" alt="{{ testimonial.settings.name }}">
+          {%- if testimonial.settings.image == blank -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
           <p>{{ testimonial.settings.review }}</p>
           <div class="name">{{ testimonial.settings.name }}</div>
           <div class="stars">
