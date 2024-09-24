@@ -117,8 +117,8 @@
       "settings": {
         "logo": "shopify://shop_images/all_for_sleep_store_since_2024__2_-removebg-preview_efd00dd9-032c-4373-bb6c-ae8948dc97b2.png",
         "other_product_name": "Other Pillows",
-        "icon_check": "shopify://shop_images/check-circle-svgrepo-com.svg",
-        "icon_x": "shopify://shop_images/cross-circle-svgrepo-com.svg"
+        "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
+        "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg"
       }
     }
   },
