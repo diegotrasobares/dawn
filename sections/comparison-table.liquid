@@ -1,17 +1,19 @@
 {%- style -%}
-  table{
-    width:100%;
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
   }
+
   .comparison-table {
     max-width: 600px;
     margin: auto;
     color: black;
     border-radius: 10px;
     padding: 20px;
-    border-collapse: collapse; /* Elimina el espacio entre celdas */
   }
 
   .table-header {
+    background-color: #f4f4f4; /* Color de fondo para el encabezado */
   }
 
   .table-header img {
@@ -29,14 +31,14 @@
   }
 
   .comparison-row {
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Agrega borde superior solo en las filas */
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Agrega borde superior solo en las filas */
   }
 
   .comparison-row:first-of-type {
     border-top: none; /* Quita el borde superior en la primera fila */
   }
 
-  .feature {
+  .feature, .feature-status {
     text-align: left;
     font-size: 16px;
     padding: 10px;
@@ -44,7 +46,6 @@
 
   .feature-status {
     text-align: center;
-    padding: 10px;
   }
 
   .icon {
