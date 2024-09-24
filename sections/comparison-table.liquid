@@ -99,7 +99,9 @@
       <tbody>
         {%- for feature in section.blocks -%}
           <tr class="comparison-row">
-            <td class="feature">{{ feature.settings.feature_name }}</td>
+            <td class="feature">
+              <b>{{ feature.settings.feature_name }}</b>
+            </td>
             <td class="feature-status">
               {%- if section.settings.icon_check != blank -%}
                 <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
