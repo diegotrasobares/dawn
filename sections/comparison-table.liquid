@@ -9,40 +9,55 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-collapse: collapse;
   }
-  .comparison-table th, .comparison-table td {
-    padding: 10px;
+
+  .table-header {
+    background-color: #444;
+  }
+
+  .table-header img {
+    width: 80px;
+  }
+
+  .product-name, .other-product-name {
     text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffeb3b;
+  }
+
+  .comparison-row {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  .comparison-table th {
-    background-color: #444;
-    color: #ffeb3b;
-    font-weight: 700;
+
+  .comparison-row:last-child {
+    border-bottom: none;
   }
-  .comparison-table .logo {
-    width: 80px;
-    vertical-align: middle;
-  }
-  .comparison-table .feature {
+
+  .feature {
     text-align: left;
+    font-size: 16px;
+    padding: 10px;
   }
-  .comparison-table .icon {
+
+  .feature-status {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .icon {
     width: 24px;
     height: 24px;
-  }
-  .comparison-table .no-border {
-    border: none;
-  }
-  .comparison-table .no-border td {
-    border: none;
   }
 {%- endstyle -%}
 
 <div class="comparison-table">
   <table>
-    <thead>
+    <thead class="table-header">
       <tr>
-        <th class="logo">
+        <th class="product-name">
           {%- if section.settings.logo != blank -%}
             {%- assign logo_widths = '80, 160, 240, 320, 480, 640' -%}
             {%- capture logo_sizes -%}
@@ -61,14 +76,14 @@
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </th>
-        <th>
+        <th class="other-product-name">
           <h2>{{ section.settings.other_product_name }}</h2>
         </th>
       </tr>
     </thead>
     <tbody>
       {%- for feature in section.blocks -%}
-        <tr>
+        <tr class="comparison-row">
           <td class="feature">{{ feature.settings.feature_name }}</td>
           <td class="feature-status">
             {%- if section.settings.icon_check != blank -%}
