@@ -1,6 +1,133 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<div class="comparison-table">
+  <div class="header">
+    <div class="logo-section">
+      <img src="{{ section.settings.logo }}" alt="WaveBeamPro Logo" class="logo">
+    </div>
+    <div class="product-name">
+      <h2>{{ section.settings.product_name }}</h2>
+    </div>
+    <div class="other-product-name">
+      <h2>{{ section.settings.other_product_name }}</h2>
+    </div>
+  </div>
+  {%- for feature in section.blocks -%}
+    <div class="comparison-row">
+      <div class="feature">{{ feature.settings.feature_name }}</div>
+      <div class="feature-status">
+        <img src="{{ feature.settings.icon_check }}" alt="Check" class="icon">
+      </div>
+      <div class="feature-status">
+        <img src="{{ feature.settings.icon_x }}" alt="X" class="icon">
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+<style>
+  .comparison-table {
+      max-width: 600px;
+      margin: auto;
+      background-color: #333;
+      color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  .logo-section img {
+      width: 80px;
+  }
+  .product-name, .other-product-name {
+      flex: 1;
+      text-align: center;
+  }
+  h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffeb3b;
+  }
+  .comparison-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .comparison-row:last-child {
+      border-bottom: none;
+  }
+  .feature {
+      flex: 2;
+      text-align: left;
+      font-size: 16px;
+  }
+  .feature-status {
+      flex: 1;
+      text-align: center;
+  }
+  .icon {
+      width: 24px;
+      height: 24px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "product_name",
+      "label": "Product Name",
+      "default": "WaveBeamPro"
+    },
+    {
+      "type": "text",
+      "id": "other_product_name",
+      "label": "Other Product Name",
+      "default": "Other Headlamps"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_name",
+          "label": "Feature Name",
+          "default": "Feature"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_check",
+          "label": "Icon Check"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_x",
+          "label": "Icon X"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
