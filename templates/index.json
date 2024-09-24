@@ -67,7 +67,7 @@
         "button_LnkWBA": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Shop now",
             "button_link": "shopify://pages/contact",
             "button_style_secondary": false
           }
