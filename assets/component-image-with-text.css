@@ -293,8 +293,8 @@
   .image-with-text.collapse-corners:not(.image-with-text--overlap)
     .image-with-text__grid--reverse
     .image-with-text__content:after {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .image-with-text.collapse-corners:not(.image-with-text--overlap)
