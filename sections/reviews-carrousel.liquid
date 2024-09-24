@@ -1,0 +1,169 @@
+{%- style -%}
+  .testimonials-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .testimonial-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .review {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+  }
+
+  .reviewer {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .stars {
+    color: #ffeb3b;
+    margin-bottom: 20px;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .testimonial-slide {
+      padding: 0 20px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="testimonials-carousel">
+  <h2>Testimonials</h2>
+
+  <div class="carousel" id="testimonialCarousel">
+    {%- for block in section.blocks -%}
+      <div class="testimonial-slide">
+        <img src="{{ block.settings.image | image_url: width: 80 }}" class="testimonial-image" alt="Profile picture">
+        <div class="review">"{{ block.settings.review }}"</div>
+        <div class="reviewer">{{ block.settings.reviewer_name }}</div>
+        <div class="stars">
+          {%- for i in (1..block.settings.stars) -%}
+            &#9733;
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+{%- javascript -%}
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.testimonial-slide');
+
+  function moveSlide(direction) {
+    currentIndex += direction;
+
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = slides.length - 1;
+    }
+
+    const carousel = document.getElementById('testimonialCarousel');
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  setInterval(function () {
+    moveSlide(1);
+  }, 5000); // Cambia de testimonio cada 5 segundos
+{%- endjavascript -%}
+
+{% schema %}
+{
+  "name": "Testimonial Carousel",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Reviewer Image"
+        },
+        {
+          "type": "text",
+          "id": "review",
+          "label": "Review Text",
+          "default": "This product is amazing!"
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name",
+          "default": "John Doe"
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Stars",
+          "min": 1,
+          "max": 5,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
