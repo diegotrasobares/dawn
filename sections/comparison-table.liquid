@@ -69,7 +69,7 @@
           class="logo"
         >
       {%- else -%}
-        {{ 'placeholder-svg' | placeholder_svg_tag: 'Logo placeholder' }}
+        {{ 'placeholder-svg' | placeholder_svg_tag: 'placeholder-svg' }}
       {%- endif -%}
     </div>
     <div class="other-product-name">
@@ -83,14 +83,14 @@
         {%- if section.settings.icon_check != blank -%}
           <img src="{{ section.settings.icon_check | image_url: width: 24 }}" alt="Check" class="icon">
         {%- else -%}
-          {{ 'placeholder-svg' | placeholder_svg_tag: 'Check placeholder' }}
+          {{ 'placeholder-svg' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </div>
       <div class="feature-status">
         {%- if section.settings.icon_x != blank -%}
           <img src="{{ section.settings.icon_x | image_url: width: 24 }}" alt="X" class="icon">
         {%- else -%}
-          {{ 'placeholder-svg' | placeholder_svg_tag: 'X placeholder' }}
+          {{ 'placeholder-svg' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </div>
     </div>
