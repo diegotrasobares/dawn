@@ -55,7 +55,6 @@
           #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
             padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
             content: '';
-            display: block;
           }
         }
 
@@ -64,7 +63,6 @@
           #Slider-{{ section.id }} .media::before {
             padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
             content: '';
-            display: block;
           }
         }
   {%- endstyle -%}
