@@ -641,11 +641,13 @@ details > * {
 .underlined-link,
 .customer a,
 .inline-richtext a {
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.1rem;
+  transition: text-decoration-thickness ease 100ms;
 }
 
 .underlined-link,
 .customer a {
-  color: rgba(var(--color-link), var(--alpha-link));
 }
 
 .inline-richtext a,
