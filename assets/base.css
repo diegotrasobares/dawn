@@ -2907,6 +2907,10 @@ details[open] > .header__menu-item .icon-caret {
   transform: rotate(180deg);
 }
 
+.header__menu-item .header__active-menu-item::parent {
+  border: 1px solid white;
+  padding: 5px 20px 5px 20px;
+}
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
