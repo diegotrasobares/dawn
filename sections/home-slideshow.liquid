@@ -145,7 +145,11 @@
             {%- endif -%}
           </div>
           <div class="custom-image-wrapper">
-            <h1>TEST HOLA HOLA</h1>
+            <img
+              src="{{ section.settings.custom_image | image_url }}"
+              alt="{{ section.settings.custom_image_alt }}"
+              class="custom-image"
+            >
           </div>
         </div>
       </div>
