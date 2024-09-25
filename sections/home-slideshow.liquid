@@ -4,8 +4,6 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-
-
     @media (max-width: 768px) {
       .custom-image-wrapper {
         right: -50px; /* Ajusta la posición de la imagen en pantallas pequeñas */
@@ -157,7 +155,7 @@
             {%- endif -%}
           </div>
           <div class="custom-image-wrapper">
-            {{ block.settings.custom_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+            {{ block.settings.custom_image | image_url: width: 450 | image_tag: loading: 'lazy' }}
           </div>
         </div>
       </div>
