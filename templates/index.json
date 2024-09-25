@@ -99,11 +99,12 @@
     },
     "home_parallax_9CKTNA": {
       "type": "home-parallax",
+      "disabled": true,
       "settings": {
         "background_image": "shopify://shop_images/drone-knoll-flatlay.jpg",
         "title": "Your Parallax Title",
         "paragraph": "This is a customizable parallax section. Add your content here.",
-        "title_color": "#000000",
+        "title_color": "#ffffff",
         "paragraph_color": "#eeeeee",
         "text_color": "#ffffff"
       }
