@@ -145,13 +145,11 @@
             {%- endif -%}
           </div>
           <div class="custom-image-wrapper">
-            <img
-              width="500"
-              height="500"
-              src="{{ section.settings.custom_image | image_url }}"
-              alt="{{ section.settings.custom_image_alt }}"
-              class="custom-image"
-            >
+            {{
+              block.settings.custom_image
+              | image_url: width: 3840
+              | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+            }}
           </div>
         </div>
       </div>
