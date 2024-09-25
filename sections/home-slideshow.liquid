@@ -144,12 +144,18 @@
               </div>
             {%- endif -%}
           </div>
+          <div class="custom-image-wrapper">
+            {%- if section.settings.custom_image -%}
+              <img
+                src="{{ section.settings.custom_image | image_url }}"
+                alt="{{ section.settings.custom_image_alt }}"
+                class="custom-image"
+              >
+            {%- endif -%}
+          </div>
         </div>
       </div>
     {%- endfor -%}
-    <div class="custom-image-wrapper">
-      <h1>TEST TEST HOLA</h1>
-    </div>
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
