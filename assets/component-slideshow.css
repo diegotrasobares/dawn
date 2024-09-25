@@ -26,16 +26,16 @@ slideshow-component .slideshow.banner {
 
 .custom-image-wrapper {
   position: absolute;
-  right: -100px; /* Mueve la imagen hacia la izquierda. Ajusta según sea necesario */
-  top: 0;
-  z-index: 1; /* Coloca la imagen debajo del texto */
-  width: 50%; /* Ajusta el tamaño relativo de la imagen */
+  right: -100px;
+  top: 100px;
+  z-index: 1;
+  width: 50%;
   height: auto;
 }
 
 .superimposed-image {
   width: 100%;
-  object-fit: contain; /* La imagen se ajusta manteniendo sus proporciones */
+  object-fit: contain;
 }
 .slideshow__slide {
   padding: 0;
