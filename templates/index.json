@@ -115,7 +115,7 @@
         "heading_arU6q3": {
           "type": "heading",
           "settings": {
-            "heading": "Master the Art of Flight with High-Quality Drones for Enthusiasts.",
+            "heading": "Master the Art of Flight with <strong>High-Quality Drones</strong> for Enthusiasts.",
             "sub_heading": "Save in flies",
             "heading_size": "h1"
           }
@@ -142,8 +142,8 @@
         "button_9cF7Ny"
       ],
       "settings": {
-        "image": "shopify://shop_images/200w_1.gif",
-        "height": "large",
+        "image": "shopify://shop_images/giphy_1.gif",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -208,7 +208,7 @@
         "comparison_row_EWtVzV"
       ],
       "settings": {
-        "logo": "shopify://shop_images/all_for_sleep_store_since_2024__2_-removebg-preview_efd00dd9-032c-4373-bb6c-ae8948dc97b2.png",
+        "logo": "shopify://shop_images/all_for_sleep_store_since_2024__3_-removebg-preview.png",
         "other_product_name": "Other Pillows",
         "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
         "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg"
