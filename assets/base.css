@@ -659,6 +659,8 @@ details > * {
 .underlined-link:hover,
 .customer a:hover,
 .inline-richtext a:hover {
+  color: rgb(var(--color-link));
+  text-decoration-thickness: 0.2rem;
 }
 
 .icon-arrow {
@@ -2887,8 +2889,6 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
 }
 
 details[open] > .header__menu-item {
