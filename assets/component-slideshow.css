@@ -28,7 +28,7 @@ slideshow-component .slideshow.banner {
   position: absolute;
   right: -100px; /* Mueve la imagen hacia la izquierda. Ajusta según sea necesario */
   top: 0;
-  z-index: 0; /* Coloca la imagen debajo del texto */
+  z-index: 1; /* Coloca la imagen debajo del texto */
   width: 50%; /* Ajusta el tamaño relativo de la imagen */
   height: auto;
 }
