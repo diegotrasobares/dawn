@@ -648,6 +648,7 @@ details > * {
 
 .underlined-link,
 .customer a {
+  color: rgba(var(--color-link), var(--alpha-link));
 }
 
 .inline-richtext a,
@@ -658,8 +659,6 @@ details > * {
 .underlined-link:hover,
 .customer a:hover,
 .inline-richtext a:hover {
-  color: rgb(var(--color-link));
-  text-decoration-thickness: 0.2rem;
 }
 
 .icon-arrow {
