@@ -2911,6 +2911,9 @@ details[open] > .header__menu-item .icon-caret {
   border: 1px solid white;
   border-radius: 20px;
   padding: 5px 20px 5px 20px;
+  opacity: 1;
+  border-color: var(--hd_menu_color_border);
+  background: var(--hd_menu_color_bg);
 }
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
