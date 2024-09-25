@@ -8,7 +8,38 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none; /* Oculto por defecto */
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
 
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
+.scroll-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  #scrollToTopBtn {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+  }
+}
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
