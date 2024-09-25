@@ -53,7 +53,7 @@ slideshow-component .slideshow.banner {
     height: 28rem;
   }
   .custom-image-wrapper {
-    position: none;
+    position: unset;
   }
   .slideshow__text-wrapper {
     display: flex;
