@@ -167,6 +167,17 @@
         "padding_bottom": 20
       }
     },
+    "home_parallax_9CKTNA": {
+      "type": "home-parallax",
+      "settings": {
+        "background_image": "shopify://shop_images/drone-knoll-flatlay.jpg",
+        "title": "Your Parallax Title",
+        "paragraph": "This is a customizable parallax section. Add your content here.",
+        "title_color": "#000000",
+        "paragraph_color": "#eeeeee",
+        "text_color": "#ffffff"
+      }
+    },
     "comparison_table_dqpCyB": {
       "type": "comparison-table",
       "blocks": {
@@ -289,27 +300,16 @@
       "settings": {
         "title": "Testimonials"
       }
-    },
-    "home_parallax_9CKTNA": {
-      "type": "home-parallax",
-      "settings": {
-        "background_image": "shopify://shop_images/drone-knoll-flatlay.jpg",
-        "title": "Your Parallax Title",
-        "paragraph": "This is a customizable parallax section. Add your content here.",
-        "title_color": "#000000",
-        "paragraph_color": "#eeeeee",
-        "text_color": "#ffffff"
-      }
     }
   },
   "order": [
     "home_slideshow_96ti7e",
     "featured_product_x4q8RN",
+    "home_parallax_9CKTNA",
     "image_with_text_NzHHgX",
     "rich_text_jkEKnC",
     "comparison_table_dqpCyB",
     "image_with_text_EaKg4z",
-    "testimonial_carousel_3GaJ3D",
-    "home_parallax_9CKTNA"
+    "testimonial_carousel_3GaJ3D"
   ]
 }
