@@ -2912,6 +2912,7 @@ details[open] > .header__menu-item .icon-caret {
   color: rgb(var(--color-foreground));
   padding: 5px 20px 5px 20px;
   border: 1px solid white;
+  border-radius: 20px;
 }
 
 .header__menu-item:hover .header__active-menu-item {
