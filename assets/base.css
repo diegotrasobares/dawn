@@ -2910,9 +2910,8 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  padding: 5px 20px 5px 20px;
-  border: 1px solid white;
-  border-radius: 20px;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
