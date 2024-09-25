@@ -2586,6 +2586,10 @@ input[type="checkbox"] {
   justify-self: end;
   padding-right: 0.8rem;
 }
+.header__icons svg {
+  width: 20px;
+  height: 20px;
+}
 
 .header__icons .shopify-app-block {
   max-width: 3.4rem;
