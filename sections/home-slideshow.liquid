@@ -154,9 +154,11 @@
               </div>
             {%- endif -%}
           </div>
-          <div class="custom-image-wrapper">
-            {{ block.settings.custom_image | image_url: width: 450 | image_tag: loading: 'lazy' }}
-          </div>
+          {% if block.settings.custom_image %}
+            <div class="custom-image-wrapper">
+              {{ block.settings.custom_image | image_url: width: 450 | image_tag: loading: 'lazy' }}
+            </div>
+          {% endif %}
         </div>
       </div>
     {%- endfor -%}
