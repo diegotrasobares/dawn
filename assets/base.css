@@ -2864,7 +2864,9 @@ details[open] > .header__submenu {
   .header--top-center .header__inline-menu > .list-menu--inline {
     justify-content: center;
   }
-
+  .list-menu--inline {
+    flex-wrap: nowrap;
+  }
   .header--middle-left .header__inline-menu {
     margin-left: 0;
   }
