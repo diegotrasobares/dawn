@@ -297,7 +297,11 @@
       }
     </script>
   </head>
-
+  <a href="#" id="scrollToTopBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="scroll-icon">
+      <path d="M12 3l7 7H5l7-7zm0 18V10h2v11h-2z" />
+    </svg>
+  </a>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
