@@ -15,7 +15,7 @@
         "slide_kMjacV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/aaabstract_1_e520b059-b596-4434-b67e-664bac062b64.jpg",
+            "image": "shopify://shop_images/satisfying_random_shapes_with__1.jpg",
             "custom_image": "shopify://shop_images/pngimg.com_-_mavic_PNG22.png",
             "h3_heading": "",
             "heading": "Enhance Your Travels with Our Versatile Travel Pillow.",
@@ -31,30 +31,10 @@
             "color_scheme": "scheme-2",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_kYEYeh": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/drone-knoll-flatlay.jpg",
-            "h3_heading": "Your H3 Text",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_kMjacV",
-        "slide_kYEYeh"
+        "slide_kMjacV"
       ],
       "settings": {
         "layout": "full_bleed",
