@@ -155,7 +155,7 @@
             {%- endif -%}
           </div>
           {% if block.settings.custom_image %}
-            <div class="custom-image-wrapper">
+            <div class="custom-image-wrapper animate--ambient">
               {{ block.settings.custom_image | image_url: width: 450 | image_tag: loading: 'lazy' }}
             </div>
           {% endif %}
