@@ -4,33 +4,69 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-    .slider-button--prev {
-      left: 10px;
+        .slideshow__text-wrapper {
+      position: relative; /* Para que los elementos hijos con position: absolute se posicionen correctamente */
+      overflow: hidden; /* Evita que el contenido salga del contenedor */
+      max-width: 100%;
+      padding: 20px; /* Ajusta según tu diseño */
     }
 
-    .slider-button--next {
-      right: 10px;
+    .slideshow__text {
+      position: relative;
+      z-index: 1; /* Coloca el texto encima de la imagen */
     }
 
+    .custom-image-wrapper {
+      position: absolute;
+      right: -100px; /* Mueve la imagen hacia la izquierda. Ajusta según sea necesario */
+      top: 0;
+      z-index: 0; /* Coloca la imagen debajo del texto */
+      width: 50%; /* Ajusta el tamaño relativo de la imagen */
+      height: auto;
+    }
 
-    @media screen and (max-width: 749px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before,
-      #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
+    .superimposed-image {
+      width: 100%;
+      object-fit: contain; /* La imagen se ajusta manteniendo sus proporciones */
+    }
+
+    @media (max-width: 768px) {
+      .custom-image-wrapper {
+        right: -50px; /* Ajusta la posición de la imagen en pantallas pequeñas */
+        width: 30%; /* Haz la imagen más pequeña en pantallas pequeñas */
       }
-    }
 
-    @media screen and (min-width: 750px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
+      .superimposed-image {
+        width: 100%;
+        height: auto;
       }
-    }
+        .slider-button--prev {
+          left: 10px;
+        }
+
+        .slider-button--next {
+          right: 10px;
+        }
+
+
+        @media screen and (max-width: 749px) {
+          #Slider-{{ section.id }}::before,
+          #Slider-{{ section.id }} .media::before,
+          #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+            padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+            content: '';
+            display: block;
+          }
+        }
+
+        @media screen and (min-width: 750px) {
+          #Slider-{{ section.id }}::before,
+          #Slider-{{ section.id }} .media::before {
+            padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+            content: '';
+            display: block;
+          }
+        }
   {%- endstyle -%}
 {%- endif -%}
 
@@ -145,7 +181,7 @@
             {%- endif -%}
           </div>
           <div class="custom-image-wrapper">
-            {{ block.settings.custom_image | image_url: width: 300 | image_tag: loading: 'lazy' }}
+            {{ block.settings.custom_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
           </div>
         </div>
       </div>
