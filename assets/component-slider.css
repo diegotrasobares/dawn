@@ -282,7 +282,7 @@ slider-component.slider-component-full-width {
     rgba(0, 0, 0, 1) 50%,
     rgba(0, 0, 0, 0) 100%
   );
-  filter: contrast(0.5) blur(1px);
+  filter: contrast(0.5);
 }
 .slider::-webkit-scrollbar-thumb {
   background-color: rgb(var(--color-foreground));
