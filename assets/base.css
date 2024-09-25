@@ -2911,6 +2911,10 @@ details[open] > .header__menu-item .icon-caret {
   border: 1px solid white;
   padding: 5px 20px 5px 20px;
 }
+.header__menu-item span.header__active-menu-item {
+  border: 1px solid white;
+  padding: 5px 20px 5px 20px;
+}
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
