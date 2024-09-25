@@ -233,6 +233,7 @@
         "text_kecCQb",
         "button_LnkWBA"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/image.png",
         "height": "adapt",
@@ -288,6 +289,14 @@
       "settings": {
         "title": "Testimonials"
       }
+    },
+    "home_parallax_9CKTNA": {
+      "type": "home-parallax",
+      "settings": {
+        "background_image": "shopify://shop_images/drone-knoll-flatlay.jpg",
+        "title": "Your Parallax Title",
+        "paragraph": "This is a customizable parallax section. Add your content here."
+      }
     }
   },
   "order": [
@@ -297,6 +306,7 @@
     "rich_text_jkEKnC",
     "comparison_table_dqpCyB",
     "image_with_text_EaKg4z",
-    "testimonial_carousel_3GaJ3D"
+    "testimonial_carousel_3GaJ3D",
+    "home_parallax_9CKTNA"
   ]
 }
