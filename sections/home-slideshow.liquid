@@ -4,31 +4,7 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-        .slideshow__text-wrapper {
-      position: relative; /* Para que los elementos hijos con position: absolute se posicionen correctamente */
-      overflow: hidden; /* Evita que el contenido salga del contenedor */
-      max-width: 100%;
-      padding: 20px; /* Ajusta según tu diseño */
-    }
 
-    .slideshow__text {
-      position: relative;
-      z-index: 1; /* Coloca el texto encima de la imagen */
-    }
-
-    .custom-image-wrapper {
-      position: absolute;
-      right: -100px; /* Mueve la imagen hacia la izquierda. Ajusta según sea necesario */
-      top: 0;
-      z-index: 0; /* Coloca la imagen debajo del texto */
-      width: 50%; /* Ajusta el tamaño relativo de la imagen */
-      height: auto;
-    }
-
-    .superimposed-image {
-      width: 100%;
-      object-fit: contain; /* La imagen se ajusta manteniendo sus proporciones */
-    }
 
     @media (max-width: 768px) {
       .custom-image-wrapper {
@@ -55,6 +31,7 @@
           #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
             padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
             content: '';
+            display: block;
           }
         }
 
@@ -63,6 +40,7 @@
           #Slider-{{ section.id }} .media::before {
             padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
             content: '';
+            display: block;
           }
         }
   {%- endstyle -%}
