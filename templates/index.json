@@ -15,7 +15,7 @@
         "slide_kMjacV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/S2587c3ff649d4bdda92c5776397d8c5b7.jpg",
+            "image": "shopify://shop_images/wallpaper-drone.jpg",
             "h3_heading": "",
             "heading": "Enhance Your Travels with Our Versatile Travel Pillow.",
             "heading_size": "h0",
@@ -96,6 +96,17 @@
         "padding_bottom": 36
       }
     },
+    "home_parallax_9CKTNA": {
+      "type": "home-parallax",
+      "settings": {
+        "background_image": "shopify://shop_images/drone-knoll-flatlay.jpg",
+        "title": "Your Parallax Title",
+        "paragraph": "This is a customizable parallax section. Add your content here.",
+        "title_color": "#000000",
+        "paragraph_color": "#eeeeee",
+        "text_color": "#ffffff"
+      }
+    },
     "image_with_text_NzHHgX": {
       "type": "image-with-text",
       "blocks": {
@@ -165,17 +176,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 20
-      }
-    },
-    "home_parallax_9CKTNA": {
-      "type": "home-parallax",
-      "settings": {
-        "background_image": "shopify://shop_images/drone-knoll-flatlay.jpg",
-        "title": "Your Parallax Title",
-        "paragraph": "This is a customizable parallax section. Add your content here.",
-        "title_color": "#000000",
-        "paragraph_color": "#eeeeee",
-        "text_color": "#ffffff"
       }
     },
     "comparison_table_dqpCyB": {
