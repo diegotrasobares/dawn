@@ -2,8 +2,7 @@
   .parallax-section {
     position: relative;
     width: 100%;
-    height: 300px;
-    color: #fff;
+    height: 500px; /* Ajusta la altura según tus necesidades */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -11,6 +10,7 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    color: {{ section.settings.text_color }}; /* Color general del texto */
   }
 
   .content-wrapper {
@@ -22,7 +22,14 @@
   }
 
   .content-wrapper h2 {
+    font-size: 3rem;
     margin-bottom: 20px;
+    color: {{ section.settings.title_color }}; /* Color del título */
+  }
+
+  .content-wrapper p {
+    font-size: 1.2rem;
+    color: {{ section.settings.paragraph_color }}; /* Color del párrafo */
   }
 {%- endstyle -%}
 
@@ -56,6 +63,24 @@
       "id": "paragraph",
       "label": "Section Paragraph",
       "default": "This is a customizable parallax section. Add your content here."
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#ffffff" /* Color blanco por defecto */
+    },
+    {
+      "type": "color",
+      "id": "paragraph_color",
+      "label": "Paragraph Color",
+      "default": "#eeeeee" /* Color gris claro por defecto */
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "General Text Color",
+      "default": "#ffffff" /* Color blanco por defecto */
     }
   ],
   "presets": [
