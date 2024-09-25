@@ -9,8 +9,8 @@
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 #scrollToTopBtn {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -24,7 +24,7 @@
 }
 
 #scrollToTopBtn:hover {
-  background-color: #555;
+  opacity: 0.5;
 }
 
 .scroll-icon {
