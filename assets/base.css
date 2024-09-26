@@ -2417,7 +2417,6 @@ input[type="checkbox"] {
   display: block;
   position: fixed;
   width: 100%;
-  background-color: rgb(var(--color-background));
 }
 
 .header-wrapper--border-bottom {
