@@ -189,12 +189,23 @@
             "product_image": "shopify://shop_images/hq720.jpg",
             "review_rating": 5
           }
+        },
+        "review_BdpLAA": {
+          "type": "review",
+          "settings": {
+            "review_text": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car.",
+            "review_author": "Jenny M.",
+            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "product_image": "shopify://shop_images/images.jpg",
+            "review_rating": 5
+          }
         }
       },
       "block_order": [
         "review_FQWtiU",
         "review_Qzt6cw",
-        "review_bGrjiP"
+        "review_bGrjiP",
+        "review_BdpLAA"
       ],
       "settings": {
         "section_title": "Why did more than 20,000 happy users choose FOCUS?"
