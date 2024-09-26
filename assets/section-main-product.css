@@ -93,6 +93,7 @@ product-info {
 /* Dynamic checkout */
 
 .shopify-payment-button__button {
+  text-transform: uppercase;
   font-family: inherit;
   min-height: 4.6rem;
 }
