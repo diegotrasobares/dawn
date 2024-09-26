@@ -92,7 +92,13 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}">
-      {% render 'product-thumbnail' %}
+      <img
+        src="{{ option.media | image_url: 'small' }}"
+        alt="{{ value | escape }}"
+        height="50"
+        width="50"
+        style="max-width: 50px; height: auto;"
+      >
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
