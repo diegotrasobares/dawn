@@ -95,9 +95,6 @@
           </button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
-            <span class="svg-wrapper">
-              {{- 'shopping-cart.svg' | inline_asset_content -}}
-            </span>
           {%- endif -%}
         </div>
       {%- endform -%}
