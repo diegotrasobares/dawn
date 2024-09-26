@@ -238,7 +238,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What items are included in the package?",
-            "icon": "check_mark",
+            "icon": "box",
             "row_content": "",
             "page": ""
           }
@@ -247,7 +247,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Does the product come with a warranty?",
-            "icon": "check_mark",
+            "icon": "recycle",
             "row_content": "",
             "page": ""
           }
@@ -256,7 +256,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is there a policy in place for returns and exchanges?",
-            "icon": "check_mark",
+            "icon": "return",
             "row_content": "",
             "page": ""
           }
