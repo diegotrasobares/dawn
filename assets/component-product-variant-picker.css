@@ -38,8 +38,6 @@ variant-selects {
   input[type="radio"]:not(.disabled):not(.visually-disabled)
   + label
   > .label-unavailable {
-  opacity: 0.5;
-
   display: none;
 }
 
