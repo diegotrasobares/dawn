@@ -1,5 +1,5 @@
 {% comment %}
-  Renders product variant-picker with thumbnail and name under the image.
+  Renders product variant-picker
 
   Accepts:
   - product: {Object} product object.
@@ -35,7 +35,6 @@
               {{- option.selected_value -}}
             </span>
           </legend>
-          <!-- Render variant options as thumbnails with names -->
           {% render 'product-variant-options',
             product: product,
             option: option,
