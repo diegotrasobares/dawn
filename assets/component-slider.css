@@ -373,7 +373,6 @@ slider-component.slider-component-full-width {
   max-width: 100%;
   border: 0;
   position: absolute;
-  top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
