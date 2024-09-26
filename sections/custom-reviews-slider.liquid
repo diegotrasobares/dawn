@@ -75,7 +75,7 @@
         <div class="testimonial">
           {%- if testimonial.settings.image != blank -%}
             <img
-              src="https://cdn.shopify.com/s{{ testimonial.settings.image | image_url: width: 80 }}"
+              src="https://cdn.shopify.com/s/files/{{ testimonial.settings.image | split: '/' | last }}"
               alt="{{ testimonial.settings.name }}"
             >
           {%- else -%}
@@ -95,7 +95,7 @@
         <div class="testimonial">
           {%- if testimonial.settings.image != blank -%}
             <img
-              src="https://cdn.shopify.com/s{{ testimonial.settings.image | image_url: width: 80 }}"
+              src="https://cdn.shopify.com/s/files/{{ testimonial.settings.image | split: '/' | last }}"
               alt="{{ testimonial.settings.name }}"
             >
           {%- else -%}
