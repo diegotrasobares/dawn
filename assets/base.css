@@ -114,7 +114,7 @@
   height: 1px;
   display: inline-block;
   vertical-align: middle;
-  background: var(--color-foreground);
+  background: rgb(var(--color-foreground));
   margin: auto;
   position: relative;
   left: 15px;
