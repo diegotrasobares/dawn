@@ -2495,8 +2495,6 @@ input[type="checkbox"] {
 }
 
 .header__heading {
-  filter: invert(100%) sepia(100%) saturate(3%) hue-rotate(253deg)
-    brightness(106%) contrast(100%);
   margin: 0;
   line-height: 0;
 }
