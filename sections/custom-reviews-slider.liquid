@@ -3,62 +3,76 @@
   <div class="reviews-container">
     <h2>{{ section.settings.section_title }}</h2>
 
-    <div class="reviews-slider">
-      {% for block in section.blocks %}
-        <div class="review-item">
-          <div class="product-image">
-            <img
-              src="{{ block.settings.product_image | image_url: width: 300, height: 300 }}"
-              alt="Product Image"
-              class="fixed-size-image"
-            >
-          </div>
+    <div class="reviews-wrapper">
+      <div class="arrow left-arrow">&#9664;</div>
+      <!-- Flecha izquierda -->
 
-          <div class="review-rating">
-            {% for i in (1..block.settings.review_rating) %}
-              &#9733;
-            {% endfor %}
-          </div>
-
-          <p class="review-text">{{ block.settings.review_text }}</p>
-
-          <div class="footer-container">
-            <p class="review-author">{{ block.settings.review_author }}</p>
-
-            <div class="review-image">
+      <div class="reviews-slider">
+        {% for block in section.blocks %}
+          <div class="review-item">
+            <div class="product-image">
               <img
-                src="{{ block.settings.image | image_url: width: 30, height: 30 }}"
-                alt="{{ block.settings.review_author }}"
-                class="author-image"
+                src="{{ block.settings.product_image | image_url: width: 300, height: 300 }}"
+                alt="Product Image"
+                class="fixed-size-image"
               >
             </div>
+
+            <!-- Estrellas de reseña -->
+            <div class="review-rating">
+              {% for i in (1..block.settings.review_rating) %}
+                &#9733;
+              {% endfor %}
+            </div>
+
+            <p class="review-text">{{ block.settings.review_text }}</p>
+
+            <div class="footer-container">
+              <p class="review-author">{{ block.settings.review_author }}</p>
+
+              <div class="review-image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 30, height: 30 }}"
+                  alt="{{ block.settings.review_author }}"
+                  class="author-image"
+                >
+              </div>
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
+
+      <div class="arrow right-arrow">&#9654;</div>
+      <!-- Flecha derecha -->
     </div>
   </div>
 </section>
 
 <style>
-  .footer-container{
-    display:flex;
-    gap:1rem;
-    align-items: center;
-  }
   .customer-reviews {
     padding: 20px;
     background-color: #f9f9f9;
   }
+
   .reviews-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
   }
+
+  .reviews-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .reviews-slider {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
+    width: 100%;
   }
+
   .review-item {
     margin: 20px;
     padding: 20px;
@@ -68,34 +82,96 @@
     flex: 0 0 300px;
     text-align: left;
   }
+
   .product-image img {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 8px;
   }
+
   .review-rating {
     font-size: 20px;
     color: #ffcc00;
     margin-bottom: 10px;
   }
+
   .review-text {
     font-size: 16px;
     margin-bottom: 10px;
   }
+
   .review-author {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
   }
+
   .review-image img {
     width: 30px;
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
   }
+
+  .footer-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* Estilo para las flechas de navegación */
+  .arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    color: #333;
+  }
+
+  .left-arrow {
+    margin-right: 10px;
+  }
+
+  .right-arrow {
+    margin-left: 10px;
+  }
+
+  /* Mostrar flechas solo en pantallas grandes */
+  @media (max-width: 768px) {
+    .arrow {
+      display: none;
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    const slider = document.querySelector(".reviews-slider");
+
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+    // Función para mover las reseñas a la izquierda
+    leftArrow.addEventListener("click", function() {
+      slider.scrollLeft -= 300; // Ajusta este valor para controlar la cantidad de desplazamiento
+    });
+
+    // Función para mover las reseñas a la derecha
+    rightArrow.addEventListener("click", function() {
+      slider.scrollLeft += 300; // Ajusta este valor para controlar la cantidad de desplazamiento
+    });
+
+    // Verificar si hay más de 3 reseñas y mostrar/ocultar las flechas
+    const reviewsCount = slider.children.length;
+    if (reviewsCount <= 3) {
+      leftArrow.style.display = "none";
+      rightArrow.style.display = "none";
+    }
+  });
+</script>
 
 {% schema %}
   {
