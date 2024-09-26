@@ -10,8 +10,7 @@
             <img
               src="{{ block.settings.product_image | image_url: width: 300, height: 300 }}"
               alt="Product Image"
-              height="100"
-              width="100"
+              class="fixed-size-image"
             >
           </div>
 
@@ -31,6 +30,7 @@
               <img
                 src="{{ block.settings.image | image_url: width: 30, height: 30 }}"
                 alt="{{ block.settings.review_author }}"
+                class="author-image"
               >
             </div>
           </div>
@@ -70,10 +70,11 @@
     text-align: left;
   }
   .product-image img {
-    width: auto;
-    height: auto;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
+    border-radius: 8px;
   }
   .review-rating {
     font-size: 20px;
@@ -90,6 +91,9 @@
     margin-bottom: 10px;
   }
   .review-image img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
     border-radius: 50%;
   }
 </style>
