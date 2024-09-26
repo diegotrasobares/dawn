@@ -1,5 +1,5 @@
 {% comment %}
-  Renders product variant-picker with thumbnail and name under the image.
+  Renders product variant-picker
 
   Accepts:
   - product: {Object} product object.
@@ -35,24 +35,12 @@
               {{- option.selected_value -}}
             </span>
           </legend>
-
-          <!-- New section for variant thumbnails and name -->
-          <div class="variant-picker">
-            {%- for value in option.values -%}
-              {% assign variant = product.variants | where: 'option{{ forloop.index }}', value | first %}
-              <label class="variant-option">
-                <!-- Check if the variant has an image -->
-                {% if variant.image %}
-                  <img src="{{ variant.image.src | img_url: '100x100' }}" alt="{{ value }}" class="variant-thumbnail">
-                {% else %}
-                  <!-- Fallback if no image is available -->
-                  <img src="{{ 'placeholder.jpg' | asset_url }}" alt="{{ value }}" class="variant-thumbnail">
-                {% endif %}
-                <span class="variant-name">{{ value }}</span>
-                <input type="radio" name="options[{{ option.name }}]" value="{{ value }}" form="{{ product_form_id }}">
-              </label>
-            {%- endfor -%}
-          </div>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
