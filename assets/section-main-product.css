@@ -403,6 +403,7 @@ a.product__text {
   }
 
   .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
+    margin-bottom: 4rem;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
   }
