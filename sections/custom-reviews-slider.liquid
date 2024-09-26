@@ -23,7 +23,10 @@
 
           <!-- Imagen del cliente -->
           <div class="review-image">
-            <img src="{{  block.settings.image  }}" alt="{{ block.settings.review_author}}">
+            <img
+              src="{{ block.settings.image | image_url: width: 50, height: 50 }}"
+              alt="{{ block.settings.review_author}}"
+            >
           </div>
         </div>
       {% endfor %}
