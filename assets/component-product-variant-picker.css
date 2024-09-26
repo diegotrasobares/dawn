@@ -38,6 +38,8 @@ variant-selects {
   input[type="radio"]:not(.disabled):not(.visually-disabled)
   + label
   > .label-unavailable {
+  opacity: 0.5;
+
   display: none;
 }
 
@@ -61,7 +63,6 @@ variant-selects {
 
 /* Custom styles for Pill display type */
 .product-form__input--pill input[type="radio"] + label {
-  opacity: 0.5;
   border: var(--variant-pills-border-width) solid
     rgba(var(--color-foreground), var(--variant-pills-border-opacity));
   color: rgba(var(--color-foreground));
