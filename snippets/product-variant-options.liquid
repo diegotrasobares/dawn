@@ -66,7 +66,7 @@
     {%
       render 'swatch-input',
       id: input_id,
-      name: Option,
+      name: input_name,
       value: value | escape,
       swatch: value.swatch,
       product_form_id: product_form_id,
@@ -92,14 +92,16 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}">
-      <img
-        src="{{value.featured_media  | image_url: width: 50 }}"
-        alt="{{ value | escape }}"
-        width="50"
-        height="50"
-        style="max-width: 50px; height: auto;"
-      >
-      {{ value -}}
+      {%- if value.featured_media or value.image -%}
+        {%- assign variant_image = value.featured_media | default: value.image -%}
+        <img
+          src="{{ variant_image | image_url: 'small' }}"
+          alt="{{ value | escape }}"
+          style="max-width: 50px; height: auto;"
+        >
+      {%- else -%}
+        {{ value }}
+      {%- endif -%}
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
