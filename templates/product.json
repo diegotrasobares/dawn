@@ -17,6 +17,11 @@
           "settings": {
           }
         },
+        "rating_PyMGci": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -98,6 +103,7 @@
       },
       "block_order": [
         "title",
+        "rating_PyMGci",
         "caption",
         "price",
         "variant_picker",
