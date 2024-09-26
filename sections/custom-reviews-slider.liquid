@@ -1,177 +1,122 @@
-<!-- customer-reviews-carousel.liquid -->
-{%- style -%}
-  .testimonial-carousel {
-    max-width: 100%;
-    margin: auto;
-    text-align: center;
-    margin: 2rem 0;
-  }
+<!-- customer-reviews.liquid -->
+<section class="customer-reviews">
+  <div class="reviews-container">
+    <!-- Título de la sección -->
+    <h2>{{ section.settings.section_title }}</h2>
 
-  .testimonial-carousel h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
+    <div class="reviews-slider">
+      <!-- Inicio del loop de reseñas -->
+      {% for block in section.blocks %}
+        <div class="review-item">
+          <!-- Estrellas de reseña -->
+          <div class="review-rating">
+            {% for i in (1..block.settings.review_rating) %}
+              <span>⭐</span>
+            {% endfor %}
+          </div>
 
-  .carousel-wrapper {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
+          <!-- Texto de la reseña -->
+          <p class="review-text">{{ block.settings.review_text }}</p>
 
-  .carousel {
-    display: flex;
-    will-change: transform;
-    animation: scroll 20s linear infinite;
-  }
+          <!-- Nombre del cliente -->
+          <p class="review-author">{{ block.settings.review_author }}</p>
 
-  .testimonial {
-    min-width: 200px;
-    margin: 0 10px;
-    box-sizing: border-box;
-    text-align: center;
-    flex-shrink: 0;
-  }
-
-  .testimonial img, .testimonial svg {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-
-  .testimonial p {
-    font-size: 1rem;
-    color: #666;
-  }
-
-  .testimonial .name {
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #333;
-  }
-
-  .testimonial .stars {
-    margin-top: 5px;
-    color: #f39c12;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-{%- endstyle -%}
-
-<div class="testimonial-carousel">
-  <h2>{{ section.settings.title }}</h2>
-  <div class="carousel-wrapper">
-    <div class="carousel">
-      {%- for testimonial in section.blocks -%}
-        <div class="testimonial">
-          {%- if testimonial.settings.image != blank -%}
+          <!-- Imagen del cliente -->
+          <div class="review-image">
             <img
-              src="https://cdn.shopify.com/s/files/{{ testimonial.settings.image | split: '/' | last }}"
-              alt="{{ testimonial.settings.name }}"
+              src="{{ block.settings.review_image | image_url: 'medium' }}"
+              alt="Review by {{ block.settings.review_author }}"
+              style="width: 100px; height: auto;"
             >
-          {%- else -%}
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-          <p class="review">{{ testimonial.settings.review }}</p>
-          <div class="name">{{ testimonial.settings.name }}</div>
-          <div class="stars">
-            {%- for star in (1..testimonial.settings.stars) -%}
-              &#9733;
-            {%- endfor -%}
           </div>
         </div>
-      {%- endfor -%}
-      <!-- Clonar testimonios para llenar el espacio -->
-      {%- for testimonial in section.blocks -%}
-        <div class="testimonial">
-          {%- if testimonial.settings.image != blank -%}
-            <img
-              src="https://cdn.shopify.com/s/files/{{ testimonial.settings.image | split: '/' | last }}"
-              alt="{{ testimonial.settings.name }}"
-            >
-          {%- else -%}
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-          <p class="review">{{ testimonial.settings.review }}</p>
-          <div class="name">{{ testimonial.settings.name }}</div>
-          <div class="stars">
-            {%- for star in (1..testimonial.settings.stars) -%}
-              &#9733;
-            {%- endfor -%}
-          </div>
-        </div>
-      {%- endfor -%}
+      {% endfor %}
+      <!-- Fin del loop de reseñas -->
     </div>
   </div>
-</div>
+</section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const carousel = document.querySelector('.carousel');
-    const wrapperWidth = document.querySelector('.carousel-wrapper').offsetWidth;
-    const testimonials = carousel.children;
-    const totalTestimonials = testimonials.length;
-
-    // Duplicamos los testimonios para crear un efecto de carrusel infinito
-    for (let i = 0; i < totalTestimonials; i++) {
-      let clone = testimonials[i].cloneNode(true);
-      carousel.appendChild(clone);
-    }
-
-    // Ajustar la velocidad del scroll basado en la cantidad de testimonios
-    const totalWidth = carousel.scrollWidth;
-    const scrollTime = totalWidth / wrapperWidth * 5; // Ajustar la duración en segundos
-
-    carousel.style.animationDuration = `${scrollTime}s`;
-  });
-</script>
+<!-- Estilos (puedes mover esto a tu archivo CSS o usar la hoja de estilo que prefieras) -->
+<style>
+  .customer-reviews {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  .reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .reviews-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  .review-item {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    flex: 0 0 300px;
+    text-align: left;
+  }
+  .review-rating {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .review-author {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .review-image img {
+    border-radius: 50%;
+  }
+</style>
 
 {% schema %}
-{
-  "name": "Customer Reviews Carousel",
+  {
+  "name": "Customer Reviews",
   "settings": [
     {
       "type": "text",
-      "id": "title",
-      "label": "Title",
+      "id": "section_title",
+      "label": "Section Title",
       "default": "Why did more than 20,000 happy users choose Fresh Juice Blender?"
     }
   ],
   "blocks": [
     {
-      "type": "testimonial",
-      "name": "Testimonial",
+      "type": "review",
+      "name": "Review",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Person Image"
-        },
-        {
           "type": "textarea",
-          "id": "review",
-          "label": "Review",
+          "id": "review_text",
+          "label": "Review Text",
           "default": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car."
         },
         {
           "type": "text",
-          "id": "name",
-          "label": "Person Name",
+          "id": "review_author",
+          "label": "Author Name",
           "default": "Jenny M."
         },
         {
+          "type": "image_picker",
+          "id": "review_image",
+          "label": "Review Image"
+        },
+        {
           "type": "range",
-          "id": "stars",
-          "label": "Number of Stars",
+          "id": "review_rating",
+          "label": "Rating (1-5)",
           "min": 1,
           "max": 5,
           "default": 5
