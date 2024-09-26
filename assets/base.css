@@ -1374,6 +1374,7 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
