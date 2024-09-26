@@ -302,6 +302,26 @@
       "settings": {
         "title": "Testimonials"
       }
+    },
+    "custom_reviews_slider_e9Lgif": {
+      "type": "custom-reviews-slider",
+      "blocks": {
+        "testimonial_EYygbD": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/61osf8BRPfL._AC_SX425_1616d8d6-bcf8-4f96-bc92-af009d1a4547.jpg",
+            "review": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car.",
+            "name": "Jenny M.",
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_EYygbD"
+      ],
+      "settings": {
+        "title": "Why did more than 20,000 happy users choose Fresh Juice Blender?"
+      }
     }
   },
   "order": [
@@ -312,6 +332,7 @@
     "rich_text_jkEKnC",
     "comparison_table_dqpCyB",
     "image_with_text_EaKg4z",
-    "testimonial_carousel_3GaJ3D"
+    "testimonial_carousel_3GaJ3D",
+    "custom_reviews_slider_e9Lgif"
   ]
 }
