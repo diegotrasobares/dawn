@@ -28,7 +28,7 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-5",
             "text_alignment_mobile": "center"
           }
         }
@@ -45,54 +45,6 @@
         "image_behavior": "ambient",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "image_with_text_NzHHgX": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_arU6q3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Master the Art of Flight with <strong>High-Quality Drones</strong> for Enthusiasts.",
-            "sub_heading": "Save in flies",
-            "heading_size": "h1"
-          }
-        },
-        "text_qz6JMf": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Discover a New Perspective with Our Precision-engineered Drone Collection. New drones with high quality video cameras</p>",
-            "text_style": "body"
-          }
-        },
-        "button_9cF7Ny": {
-          "type": "button",
-          "settings": {
-            "button_label": "Check now!",
-            "button_link": "shopify://products/sleepy™-pillow",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_arU6q3",
-        "text_qz6JMf",
-        "button_9cF7Ny"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/giphy_1.gif",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "featured_product_x4q8RN": {
@@ -155,6 +107,54 @@
         "title_color": "#ffffff",
         "paragraph_color": "#eeeeee",
         "text_color": "#ffffff"
+      }
+    },
+    "image_with_text_NzHHgX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_arU6q3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Master the Art of Flight with <strong>High-Quality Drones</strong> for Enthusiasts.",
+            "sub_heading": "Save in flies",
+            "heading_size": "h1"
+          }
+        },
+        "text_qz6JMf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover a New Perspective with Our Precision-engineered Drone Collection. New drones with high quality video cameras</p>",
+            "text_style": "body"
+          }
+        },
+        "button_9cF7Ny": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check now!",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_arU6q3",
+        "text_qz6JMf",
+        "button_9cF7Ny"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/giphy_1.gif",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "custom_reviews_slider_e9Lgif": {
@@ -225,7 +225,6 @@
       "block_order": [
         "heading_gTBbhm"
       ],
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -262,7 +261,6 @@
         "comparison_row_iKTHGp",
         "comparison_row_EWtVzV"
       ],
-      "disabled": true,
       "settings": {
         "logo": "shopify://shop_images/all_for_sleep_store_since_2024__3_-removebg-preview.png",
         "other_product_name": "Other Pillows",
@@ -275,7 +273,6 @@
       "blocks": {
         "heading_VdM88R": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Travel in Style and Comfort",
             "sub_heading": "Easy Packing",
@@ -323,9 +320,9 @@
   },
   "order": [
     "home_slideshow_96ti7e",
-    "image_with_text_NzHHgX",
     "featured_product_x4q8RN",
     "home_parallax_9CKTNA",
+    "image_with_text_NzHHgX",
     "custom_reviews_slider_e9Lgif",
     "rich_text_jkEKnC",
     "comparison_table_dqpCyB",

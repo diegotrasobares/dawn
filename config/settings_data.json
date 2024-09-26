@@ -190,8 +190,8 @@
           "background": "#334fb4",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#334fb4",
+          "button": "#334fb4",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
