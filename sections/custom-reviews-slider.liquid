@@ -24,7 +24,7 @@
           <!-- Imagen del cliente -->
           <div class="review-image">
             <img
-              src="{{ block.settings.review_image | image_url: 'medium' }}"
+              src="{{ block.settings.image | image_url: 'medium' }}"
               alt="Review by {{ block.settings.review_author }}"
               style="width: 100px; height: auto;"
             >
@@ -110,7 +110,7 @@
         },
         {
           "type": "image_picker",
-          "id": "review_image",
+          "id": "image",
           "label": "Review Image"
         },
         {
