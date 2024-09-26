@@ -157,6 +157,49 @@
         "padding_bottom": 36
       }
     },
+    "custom_reviews_slider_e9Lgif": {
+      "type": "custom-reviews-slider",
+      "blocks": {
+        "review_FQWtiU": {
+          "type": "review",
+          "settings": {
+            "review_text": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car.",
+            "review_author": "Jenny M.",
+            "image": "shopify://shop_images/cute-baby-girls-face-close-up.jpg",
+            "product_image": "shopify://shop_images/images.jpg",
+            "review_rating": 5
+          }
+        },
+        "review_Qzt6cw": {
+          "type": "review",
+          "settings": {
+            "review_text": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car.",
+            "review_author": "Jenny M.",
+            "image": "shopify://shop_images/brown-eyes-of-a-person-wearing-a-face-mask.jpg",
+            "product_image": "shopify://shop_images/EH80jgtUcAAAtqz.jpg",
+            "review_rating": 5
+          }
+        },
+        "review_bGrjiP": {
+          "type": "review",
+          "settings": {
+            "review_text": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car.",
+            "review_author": "Jenny M.",
+            "image": "shopify://shop_images/woman-facepainted-canada-day.jpg",
+            "product_image": "shopify://shop_images/hq720.jpg",
+            "review_rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_FQWtiU",
+        "review_Qzt6cw",
+        "review_bGrjiP"
+      ],
+      "settings": {
+        "section_title": "Why did more than 20,000 happy users choose FOCUS?"
+      }
+    },
     "rich_text_jkEKnC": {
       "type": "rich-text",
       "blocks": {
@@ -262,67 +305,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "testimonial_carousel_3GaJ3D": {
-      "type": "testimonial-carousel",
-      "blocks": {
-        "testimonial_xfCbWJ": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/brushing-on-makeup-foundation.jpg",
-            "review": "This product is amazing!",
-            "name": "John Doe",
-            "stars": 4
-          }
-        },
-        "testimonial_6gGchy": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/woman-facepainted-canada-day.jpg",
-            "review": "This product is amazing!",
-            "name": "John Doe",
-            "stars": 5
-          }
-        },
-        "testimonial_7UKgDF": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/woman-holds-her-hand-to-her-cheek.jpg",
-            "review": "This product is amazing!",
-            "name": "John Doe",
-            "stars": 5
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_xfCbWJ",
-        "testimonial_6gGchy",
-        "testimonial_7UKgDF"
-      ],
-      "settings": {
-        "title": "Testimonials"
-      }
-    },
-    "custom_reviews_slider_e9Lgif": {
-      "type": "custom-reviews-slider",
-      "blocks": {
-        "review_FQWtiU": {
-          "type": "review",
-          "settings": {
-            "review_text": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car.",
-            "review_author": "Jenny M.",
-            "image": "shopify://shop_images/cute-baby-girls-face-close-up.jpg",
-            "product_image": "shopify://shop_images/61osf8BRPfL._AC_SX425_5af0601d-1c4f-4905-9f2e-84371d411b25.jpg",
-            "review_rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_FQWtiU"
-      ],
-      "settings": {
-        "section_title": "Why did more than 20,000 happy users choose Fresh Juice Blender?"
-      }
     }
   },
   "order": [
@@ -330,10 +312,9 @@
     "featured_product_x4q8RN",
     "home_parallax_9CKTNA",
     "image_with_text_NzHHgX",
+    "custom_reviews_slider_e9Lgif",
     "rich_text_jkEKnC",
     "comparison_table_dqpCyB",
-    "image_with_text_EaKg4z",
-    "testimonial_carousel_3GaJ3D",
-    "custom_reviews_slider_e9Lgif"
+    "image_with_text_EaKg4z"
   ]
 }
