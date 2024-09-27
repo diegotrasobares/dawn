@@ -471,7 +471,7 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-                {% if sections.settings.show_fake_counter %}
+                {% if section.settings.show_fake_counter %}
                   <script src="{{ 'fake-counter.js' | asset_url }}" defer="defer"></script>
                   <div class="fake-counter">
                     <p><strong class="counter-number"></strong> personas están viendo este producto</p>
