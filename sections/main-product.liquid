@@ -471,11 +471,10 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-                {%- if sections.settings.show_fake_counter -%}
-                  <div class="fake-counter">
-                    <p><strong class="counter-number"></strong> personas están viendo este producto</p>
-                  </div>
-                {%- endif -%}
+                <div class="fake-counter">
+                  <p><strong class="counter-number"></strong> personas están viendo este producto</p>
+                </div>
+
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
