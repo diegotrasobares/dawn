@@ -109,6 +109,89 @@
         "text_color": "#ffffff"
       }
     },
+    "image_with_text_EaKg4z": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VdM88R": {
+          "type": "heading",
+          "settings": {
+            "heading": "Travel in Style and Comfort",
+            "sub_heading": "Easy Packing",
+            "heading_size": "h1"
+          }
+        },
+        "text_kecCQb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_LnkWBA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VdM88R",
+        "text_kecCQb",
+        "button_LnkWBA"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "comparison_table_dqpCyB": {
+      "type": "comparison-table",
+      "blocks": {
+        "comparison_row_GNeQD9": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "HD Camera"
+          }
+        },
+        "comparison_row_iKTHGp": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "35 Hours battery"
+          }
+        },
+        "comparison_row_EWtVzV": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "360º Spin"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_row_GNeQD9",
+        "comparison_row_iKTHGp",
+        "comparison_row_EWtVzV"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/all_for_sleep_store_since_2024__3_-removebg-preview.png",
+        "other_product_name": "Other Drones",
+        "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
+        "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg"
+      }
+    },
     "image_with_text_NzHHgX": {
       "type": "image-with-text",
       "blocks": {
@@ -233,99 +316,16 @@
         "padding_top": 40,
         "padding_bottom": 20
       }
-    },
-    "comparison_table_dqpCyB": {
-      "type": "comparison-table",
-      "blocks": {
-        "comparison_row_GNeQD9": {
-          "type": "comparison_row",
-          "settings": {
-            "feature_name": "DASD"
-          }
-        },
-        "comparison_row_iKTHGp": {
-          "type": "comparison_row",
-          "settings": {
-            "feature_name": "Feature"
-          }
-        },
-        "comparison_row_EWtVzV": {
-          "type": "comparison_row",
-          "settings": {
-            "feature_name": "Feature"
-          }
-        }
-      },
-      "block_order": [
-        "comparison_row_GNeQD9",
-        "comparison_row_iKTHGp",
-        "comparison_row_EWtVzV"
-      ],
-      "settings": {
-        "logo": "shopify://shop_images/all_for_sleep_store_since_2024__3_-removebg-preview.png",
-        "other_product_name": "Other Pillows",
-        "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
-        "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg"
-      }
-    },
-    "image_with_text_EaKg4z": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_VdM88R": {
-          "type": "heading",
-          "settings": {
-            "heading": "Travel in Style and Comfort",
-            "sub_heading": "Easy Packing",
-            "heading_size": "h1"
-          }
-        },
-        "text_kecCQb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_LnkWBA": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop now",
-            "button_link": "shopify://pages/contact",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_VdM88R",
-        "text_kecCQb",
-        "button_LnkWBA"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/image.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "home_slideshow_96ti7e",
     "featured_product_x4q8RN",
     "home_parallax_9CKTNA",
+    "image_with_text_EaKg4z",
+    "comparison_table_dqpCyB",
     "image_with_text_NzHHgX",
     "custom_reviews_slider_e9Lgif",
-    "rich_text_jkEKnC",
-    "comparison_table_dqpCyB",
-    "image_with_text_EaKg4z"
+    "rich_text_jkEKnC"
   ]
 }
