@@ -128,6 +128,7 @@
         "media_size": "small",
         "constrain_to_viewport": true,
         "show_fake_counter": true,
+        "fake_counter_text": "People are watching this product",
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
         "media_position": "left",
