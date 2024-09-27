@@ -471,9 +471,11 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-                <div class="fake-counter">
-                  <p><strong class="counter-number"></strong> personas están viendo este producto</p>
-                </div>
+                {%- if sections.settings.show_fake_counter -%}
+                  <div class="fake-counter">
+                    <p><strong class="counter-number"></strong> personas están viendo este producto</p>
+                  </div>
+                {%- endif -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -2125,8 +2127,7 @@
       "id": "constrain_to_viewport",
       "default": true,
       "label": "t:sections.main-product.settings.constrain_to_viewport.label"
-    }
-    ,
+    },
          {
         "type": "checkbox",
         "id": "show_fake_counter",
