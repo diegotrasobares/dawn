@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -5,37 +14,30 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
+        "text_MaCbtR": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "<strong>CONTACT US</strong>",
+            "subtext": "<p>We are a team of designers and developers who creates high quality premium Shopify themes.</p><p></p><ul><li>No 40 Baria Sreet 133/2, NewYork, USA.</li><li>(012) 800 456 789</li><li>support@masstechnologist</li></ul>"
+          }
+        },
+        "link_list_cnLnpe": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>MAIN MENU</strong>",
+            "menu": "footer"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "text_MaCbtR",
+        "link_list_cnLnpe"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
