@@ -194,6 +194,29 @@
         "section_background_color": "#f9f9f9"
       }
     },
+    "rich_text_jkEKnC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gTBbhm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>FOCUS™</strong> Difference",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gTBbhm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
     "image_with_text_NzHHgX": {
       "type": "image-with-text",
       "blocks": {
@@ -295,29 +318,6 @@
       "settings": {
         "section_title": "Why did more than 20,000 happy users choose FOCUS?"
       }
-    },
-    "rich_text_jkEKnC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_gTBbhm": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>FOCUS™</strong> Difference",
-            "heading_size": "h0"
-          }
-        }
-      },
-      "block_order": [
-        "heading_gTBbhm"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 20
-      }
     }
   },
   "order": [
@@ -325,9 +325,9 @@
     "featured_product_x4q8RN",
     "home_parallax_9CKTNA",
     "image_with_text_EaKg4z",
+    "rich_text_jkEKnC",
     "comparison_table_dqpCyB",
     "image_with_text_NzHHgX",
-    "custom_reviews_slider_e9Lgif",
-    "rich_text_jkEKnC"
+    "custom_reviews_slider_e9Lgif"
   ]
 }
