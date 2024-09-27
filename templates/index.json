@@ -189,7 +189,9 @@
         "logo": "shopify://shop_images/all_for_sleep_store_since_2024__3_-removebg-preview.png",
         "other_product_name": "Other Drones",
         "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
-        "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg"
+        "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg",
+        "background_color": "#ffffff",
+        "section_background_color": "#f9f9f9"
       }
     },
     "image_with_text_NzHHgX": {
