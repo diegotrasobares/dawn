@@ -68,9 +68,11 @@
 
   .reviews-slider {
     display: flex;
-    overflow: hidden;
+    overflow-x: scroll; /* Permite el scroll horizontal con el dedo en móviles */
     scroll-behavior: smooth;
     width: 100%;
+    gap: 20px; /* Espaciado entre reseñas */
+    -webkit-overflow-scrolling: touch; /* Habilita el smooth scrolling en móviles */
   }
 
   .review-item {
@@ -79,7 +81,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: white;
-    flex: 0 0 300px;
+    flex: 0 0 300px; /* Tamaño fijo para las reseñas */
     text-align: left;
   }
 
@@ -139,7 +141,15 @@
 
   @media (max-width: 768px) {
     .arrow {
-      display: none;
+      display: none; /* Ocultar flechas en móvil */
+    }
+
+    .reviews-slider {
+      scroll-snap-type: x mandatory; /* Facilitar scroll por reseñas completas */
+    }
+
+    .review-item {
+      scroll-snap-align: start; /* Ajustar para cada reseña */
     }
   }
 </style>
