@@ -145,28 +145,26 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+   document.addEventListener("DOMContentLoaded", function() {
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
     const slider = document.querySelector(".reviews-slider");
 
-    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    // Desplazamiento con flechas solo en escritorio
+    if (window.innerWidth > 768) {
+      leftArrow.addEventListener("click", function() {
+        slider.scrollLeft -= 300; // Ajustar para controlar el desplazamiento
+      });
 
-    // Función para mover las reseñas a la izquierda
-    leftArrow.addEventListener("click", function() {
-      slider.scrollLeft -= 300; // Ajusta este valor para controlar la cantidad de desplazamiento
-    });
+      rightArrow.addEventListener("click", function() {
+        slider.scrollLeft += 300; // Ajustar para controlar el desplazamiento
+      });
 
-    // Función para mover las reseñas a la derecha
-    rightArrow.addEventListener("click", function() {
-      slider.scrollLeft += 300; // Ajusta este valor para controlar la cantidad de desplazamiento
-    });
-
-    // Verificar si hay más de 3 reseñas y mostrar/ocultar las flechas
-    const reviewsCount = slider.children.length;
-    if (reviewsCount <= 3) {
-      leftArrow.style.display = "none";
-      rightArrow.style.display = "none";
+      const reviewsCount = slider.children.length;
+      if (reviewsCount <= 3) {
+        leftArrow.style.display = "none";
+        rightArrow.style.display = "none";
+      }
     }
   });
 </script>
