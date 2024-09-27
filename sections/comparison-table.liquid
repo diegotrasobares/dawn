@@ -1,4 +1,9 @@
 {%- style -%}
+  .section-background {
+    background-color: {{ section.settings.section_background_color }}; /* Color de fondo dinámico para la sección */
+    padding: 20px;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse; /* Elimina el espacio entre celdas */
@@ -12,22 +17,20 @@
     color: black;
     border-radius: 10px;
     padding: 20px;
-    margin:2rem;
-  }
-
-  .table-header {
+    margin: 2rem;
+    background-color: {{ section.settings.background_color }}; /* Color de fondo dinámico para la tabla */
   }
 
   .table-header img {
     width: 120px;
   }
 
-
   @media screen and (max-width: 550px) {
-      .table-header img {
-    width: 90px;
+    .table-header img {
+      width: 90px;
+    }
   }
-  }
+
   .product-name, .other-product-name {
     text-align: center;
   }
@@ -41,8 +44,6 @@
     border-top: 1px solid rgba(0, 0, 0, 0.2); /* Agrega borde superior solo en las filas */
   }
 
-
-
   .feature, .feature-status {
     text-align: left;
     font-size: 16px;
@@ -52,13 +53,12 @@
   .feature-status {
     text-align: center;
   }
-  .container {
-           display: flex;
-    justify-content: center;
 
+  .container {
+    display: flex;
+    justify-content: center;
   }
 
-  /* Asegúrate de que no haya bordes en las celdas */
   td, th {
     border: none; /* Elimina cualquier borde en celdas y encabezados */
   }
@@ -68,7 +68,8 @@
     height: 24px;
   }
 {%- endstyle -%}
-<div class="page-width container">
+
+<div class="page-width section-background">
   <div class="comparison-table">
     <table>
       <thead class="table-header">
@@ -155,8 +156,14 @@
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background Color",
+      "label": "Table Background Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section Background Color",
+      "default": "#f4f4f4"
     }
   ],
   "blocks": [
