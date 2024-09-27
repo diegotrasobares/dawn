@@ -3,6 +3,7 @@ product-info {
 }
 .fake-counter {
   display: flex;
+  gap: 1rem;
   align-items: center;
   font-size: 16px;
   color: #333;
