@@ -1,3 +1,4 @@
+<!-- customer-reviews.liquid -->
 <section class="customer-reviews">
   <div class="reviews-container">
     <h1>{{ section.settings.section_title }}</h1>
@@ -67,9 +68,8 @@
 
   .reviews-slider {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow: hidden;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Allows smooth scrolling on mobile */
     width: 100%;
   }
 
@@ -81,7 +81,6 @@
     background-color: white;
     flex: 0 0 300px;
     text-align: left;
-    min-width: 300px; /* Ensures reviews take up the correct width */
   }
 
   .product-image img {
@@ -142,10 +141,6 @@
     .arrow {
       display: none;
     }
-
-    .reviews-slider {
-      overflow-x: auto;
-    }
   }
 </style>
 
@@ -154,6 +149,8 @@
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
     const slider = document.querySelector(".reviews-slider");
+
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
     // Función para mover las reseñas a la izquierda
     leftArrow.addEventListener("click", function() {
@@ -173,3 +170,61 @@
     }
   });
 </script>
+
+{% schema %}
+  {
+  "name": "Customer Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Why did more than 20,000 happy users choose Fresh Juice Blender?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "This blender is perfect! It not only blends frozen fruit but it crushes ice so well too. It's easy to clean and fits in the cup holder in my car."
+        },
+        {
+          "type": "text",
+          "id": "review_author",
+          "label": "Author Name",
+          "default": "Jenny M."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Author Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product Image"
+        },
+        {
+          "type": "range",
+          "id": "review_rating",
+          "label": "Rating (1-5)",
+          "min": 1,
+          "max": 5,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer Reviews",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
