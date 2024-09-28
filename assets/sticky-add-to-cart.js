@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Mostrar el sticky Add to Cart al hacer scroll
   const stickyAddToCart = document.getElementById('stickyAddToCart');
-  const productImage = document.querySelector('.product-single__media'); // Selector de la imagen del producto
+  const productImage = document.querySelector('.product__media'); // Selector de la imagen del producto
   const addToCartButton = document.getElementById('stickyAddButton');
   const variantSelect = document.getElementById('stickyVariantSelect');
 
