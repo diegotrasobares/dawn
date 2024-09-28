@@ -83,8 +83,7 @@
           <img
             class="sticky-image"
             id="stickyVariantImage"
-            src="{{ shop.url}}/cdn/shop/{{ product.variants[forloop.index0].image.src | image_url: 'small' }}"
-
+            src="{{ product.featured_image | img_url: 'small' }}"
             alt="{{ product.title }}"
           >
 
