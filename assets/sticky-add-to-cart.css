@@ -12,12 +12,35 @@
   align-items: center;
 }
 /* Estilo de la notificación */
+.spinner {
+  border: 3px solid var(--color-bg-light); /* Color de fondo del spinner */
+  border-top: 3px solid var(--color-primary); /* Color del spinner */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite; /* Animación */
+  display: inline-block; /* Permitir el control de visualización */
+}
+
+/* Animación de giro */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo de la notificación */
 .notification {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #00aaff;
-  color: white;
+  background-color: var(
+    --color-primary
+  ); /* Color de fondo de la notificación */
+  color: var(--color-text-light); /* Color del texto en la notificación */
   padding: 10px;
   border-radius: 5px;
   display: none; /* Ocultarlo por defecto */
