@@ -73,7 +73,6 @@
   border-radius: var(--buttons-radius);
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 #stickyAddButton:hover {
