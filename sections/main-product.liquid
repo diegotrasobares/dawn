@@ -80,24 +80,34 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="sticky-add-to-cart" id="stickyAddToCart">
         <div class="sticky-container">
-          <img class="sticky-image" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
+          <!-- Imagen de la variante seleccionada -->
+          <img
+            class="sticky-image"
+            id="stickyVariantImage"
+            src="{{ product.featured_image | img_url: 'small' }}"
+            alt="{{ product.title }}"
+          >
+
           <div class="sticky-info">
-            <div class="main-info">
-              <h3>{{ product.title }}</h3>
-              <span class="sticky-price">
-                {% if product.compare_at_price > product.price %}
-                  <span class="discounted-price">{{ product.price | money }}</span>
-                  <span class="original-price">{{ product.compare_at_price | money }}</span>
-                {% else %}
-                  <span class="price">{{ product.price | money }}</span>
-                {% endif %}
-              </span>
-            </div>
+            <h3>{{ product.title }}</h3>
+            <span class="sticky-price">
+              {% if product.compare_at_price > product.price %}
+                <span class="discounted-price">{{ product.price | money }}</span>
+                <span class="original-price">{{ product.compare_at_price | money }}</span>
+              {% else %}
+                <span class="price">{{ product.price | money }}</span>
+              {% endif %}
+            </span>
+
+            <!-- Selector de variantes con imagen -->
             <select id="stickyVariantSelect">
               {% for variant in product.variants %}
-                <option value="{{ variant.id }}">{{ variant.title }}</option>
+                <option value="{{ variant.id }}" data-image="{{ variant.image | img_url: 'small' }}">
+                  {{ variant.title }}
+                </option>
               {% endfor %}
             </select>
+
             <button id="stickyAddButton">Add To Cart</button>
           </div>
         </div>
