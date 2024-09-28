@@ -96,7 +96,7 @@
 
                 <div class="sticky-info">
                   <div class="main-info">
-                    <h3 style="color: rgb(var(--color-button-text));">{{ product.title }}</h3>
+                    <h3 style="color: {{ section.settings.sticky_text_color }};">{{ product.title }}</h3>
                     <span class="sticky-price" style="color: {{ section.settings.sticky_text_color }};">
                       {% if product.compare_at_price > product.price %}
                         <span class="discounted-price">{{ product.price | money }}</span>
