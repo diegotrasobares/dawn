@@ -80,12 +80,7 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="sticky-add-to-cart" id="stickyAddToCart">
         <div class="sticky-container">
-          <img
-            class="sticky-image"
-            id="stickyVariantImage"
-            src="{{ product.featured_image | img_url: 'small' }}"
-            alt="{{ product.title }}"
-          >
+          src="{{ shop.url }}/cdn/shop/{{ product.variants[forloop.index0].image.src | image_url: 'small' }}"
 
           <div class="sticky-info">
             <div class="main-info">
