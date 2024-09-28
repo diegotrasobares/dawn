@@ -4,18 +4,30 @@ document.addEventListener('DOMContentLoaded', function () {
   const addToCartButton = document.getElementById('stickyAddButton');
   const variantSelect = document.getElementById('stickyVariantSelect');
   const notification = document.createElement('div'); // Crear la notificación
+  const spinner = document.createElement('div'); // Crear el spinner
 
   // Estilo para la notificación
   notification.style.position = 'fixed';
   notification.style.top = '20px';
   notification.style.right = '20px';
-  notification.style.backgroundColor = 'rgb(var(--color-foreground))';
+  notification.style.backgroundColor = '#00aaff';
   notification.style.color = 'white';
   notification.style.padding = '10px';
   notification.style.borderRadius = '5px';
   notification.style.display = 'none'; // Ocultarlo por defecto
   notification.textContent = 'Producto añadido al carrito';
   document.body.appendChild(notification); // Añadir la notificación al cuerpo del documento
+
+  // Estilo para el spinner
+  spinner.className = 'spinner';
+  spinner.style.display = 'none'; // Ocultarlo por defecto
+  spinner.style.width = '20px';
+  spinner.style.height = '20px';
+  spinner.style.border = '3px solid #f3f3f3'; // Color de fondo del spinner
+  spinner.style.borderTop = '3px solid #3498db'; // Color del spinner
+  spinner.style.borderRadius = '50%';
+  spinner.style.animation = 'spin 1s linear infinite'; // Animación
+  addToCartButton.appendChild(spinner); // Añadir el spinner al botón
 
   window.addEventListener('scroll', function () {
     const imageBottom = productImage.offsetTop + productImage.offsetHeight;
@@ -29,11 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
   addToCartButton.addEventListener('click', function () {
     const selectedVariantId = variantSelect.value;
 
-    // Cambiar color del botón al hacer clic
-    addToCartButton.style.backgroundColor = '#0077cc'; // Cambia el color al hacer clic
-    setTimeout(() => {
-      addToCartButton.style.backgroundColor = '#00aaff'; // Restablecer el color después de un tiempo
-    }, 200); // Cambiar de vuelta después de 200ms
+    // Mostrar el spinner al hacer clic
+    spinner.style.display = 'block';
+    addToCartButton.disabled = true; // Desactivar el botón
 
     fetch('/cart/add.js', {
       method: 'POST',
@@ -57,6 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(error => {
       console.error('Error al añadir el producto al carrito:', error);
+    })
+    .finally(() => {
+      spinner.style.display = 'none'; // Ocultar el spinner
+      addToCartButton.disabled = false; // Activar el botón
     });
   });
 });
