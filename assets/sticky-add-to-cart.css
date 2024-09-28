@@ -46,7 +46,7 @@
 }
 
 .discounted-price {
-  color: #00aaff;
+  color: rgb(var(--color-foreground));
   font-weight: bold;
   margin-right: 5px;
 }
