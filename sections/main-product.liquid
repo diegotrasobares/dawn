@@ -117,8 +117,13 @@
 
                   <button id="stickyAddButton" style="color: {{ section.settings.sticky_text_color }};">
                     <p>Add To Cart</p>
+                    <div class="spinner" style="display: none;"></div>
+                    <!-- Spinner aquí -->
                   </button>
                 </div>
+
+                <!-- Notificación -->
+                <div id="notification" class="notification" style="display: none;">Producto añadido al carrito</div>
               </div>
             </div>
           {% endif %}
