@@ -80,12 +80,21 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="sticky-add-to-cart" id="stickyAddToCart">
         <div class="sticky-container">
-          <img
-            class="sticky-image"
-            id="stickyVariantImage"
-            src="{{ product.featured_image | img_url: 'small' }}"
-            alt="{{ product.title }}"
-          >
+          <!-- Contenedor de imágenes de variantes -->
+          <div class="sticky-images">
+            {% for variant in product.variants %}
+              <img
+                class="sticky-image variant-image variant-image-{{ variant.id }}"
+                src="{{ variant.image | img_url: 'small' }}"
+                alt="{{ variant.title }}"
+                {% if forloop.first %}
+                  style="display:block;"
+                {% else %}
+                  style="display:none;"
+                {% endif %}
+              >
+            {% endfor %}
+          </div>
 
           <div class="sticky-info">
             <h3>{{ product.title }}</h3>
@@ -98,14 +107,22 @@
               {% endif %}
             </span>
 
-            <!-- Selector de variantes con imagen -->
-            <select id="stickyVariantSelect">
+            <!-- Radio buttons para seleccionar la variante -->
+            <div class="variant-options">
               {% for variant in product.variants %}
-                <option value="{{ variant.id }}" data-image="{{ variant.image | img_url: 'small' }}">
-                  {{ variant.title }}
-                </option>
+                <input
+                  type="radio"
+                  name="variant"
+                  id="variant-{{ variant.id }}"
+                  class="variant-radio"
+                  value="{{ variant.id }}"
+                  {% if forloop.first %}
+                    checked
+                  {% endif %}
+                >
+                <label for="variant-{{ variant.id }}">{{ variant.title }}</label>
               {% endfor %}
-            </select>
+            </div>
 
             <button id="stickyAddButton">Add To Cart</button>
           </div>
