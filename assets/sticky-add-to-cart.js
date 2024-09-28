@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Mostrar el sticky cuando se scrollea por debajo de la imagen del producto
   window.addEventListener('scroll', function () {
     const imageBottom = productImage.offsetTop + productImage.offsetHeight;
-    if (window.scrollY > imageBottom) {
+    if (window.scrollY > imageBottom+1000) {
       stickyAddToCart.style.display = 'flex'; // Mostrar el sticky
     } else {
       stickyAddToCart.style.display = 'none'; // Ocultar el sticky
