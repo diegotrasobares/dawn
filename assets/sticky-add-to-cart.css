@@ -15,6 +15,9 @@
   .sticky-image {
     display: none;
   }
+  .main-info h3 {
+    display: none;
+  }
 }
 .sticky-container {
   display: flex;
