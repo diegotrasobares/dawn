@@ -75,6 +75,28 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+      <div class="sticky-add-to-cart" id="stickyAddToCart">
+        <div class="sticky-container">
+          <img class="sticky-image" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
+          <div class="sticky-info">
+            <h3>{{ product.title }}</h3>
+            <span class="sticky-price">
+              {% if product.compare_at_price > product.price %}
+                <span class="discounted-price">{{ product.price | money }}</span>
+                <span class="original-price">{{ product.compare_at_price | money }}</span>
+              {% else %}
+                <span class="price">{{ product.price | money }}</span>
+              {% endif %}
+            </span>
+            <select id="stickyVariantSelect">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}">{{ variant.title }}</option>
+              {% endfor %}
+            </select>
+            <button id="stickyAddButton">Add To Cart</button>
+          </div>
+        </div>
+      </div>
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
