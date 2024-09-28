@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
   notification.style.position = 'fixed';
   notification.style.top = '20px';
   notification.style.right = '20px';
-  notification.style.backgroundColor = '#00aaff';
-  notification.style.color = 'white';
+  notification.style.backgroundColor = 'var(--color-primary)'; // Usar variable de color de Shopify
+  notification.style.color = 'var(--color-text-light)'; // Usar variable de color de texto de Shopify
   notification.style.padding = '10px';
   notification.style.borderRadius = '5px';
   notification.style.display = 'none'; // Ocultarlo por defecto
@@ -21,12 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Estilo para el spinner
   spinner.className = 'spinner';
   spinner.style.display = 'none'; // Ocultarlo por defecto
-  spinner.style.width = '20px';
-  spinner.style.height = '20px';
-  spinner.style.border = '3px solid #f3f3f3'; // Color de fondo del spinner
-  spinner.style.borderTop = '3px solid #3498db'; // Color del spinner
-  spinner.style.borderRadius = '50%';
-  spinner.style.animation = 'spin 1s linear infinite'; // Animación
   addToCartButton.appendChild(spinner); // Añadir el spinner al botón
 
   window.addEventListener('scroll', function () {
