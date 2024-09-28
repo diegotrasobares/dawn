@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectedVariantId = variantSelect.value;
 
     // Mostrar el spinner al hacer clic
-    spinner.style.display = 'block';
+    spinner.style.display = 'flex';
     addToCartButton.disabled = true; // Desactivar el botón
 
     fetch('/cart/add.js', {
