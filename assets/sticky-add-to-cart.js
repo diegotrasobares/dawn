@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   spinner.style.width = '20px';
   spinner.style.height = '20px';
   spinner.style.border = '3px solid #f3f3f3'; // Color de fondo del spinner
-  spinner.style.borderTop = '3px solid #3498db'; // Color del spinner
+  spinner.style.borderTop = '3px solid var(--color-secondary)'; // Color del spinner
   spinner.style.borderRadius = '50%';
   spinner.style.animation = 'spin 1s linear infinite'; // Animación
   addToCartButton.appendChild(spinner); // Añadir el spinner al botón
