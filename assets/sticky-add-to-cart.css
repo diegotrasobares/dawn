@@ -123,5 +123,5 @@
   margin: 0;
 }
 #stickyAddButton:hover {
-  background-color: #0077cc;
+  opacity:0.5;
 }
