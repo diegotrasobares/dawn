@@ -24,7 +24,9 @@
   width: 50px;
   height: auto;
 }
-
+.main-info {
+  display: flex;
+}
 .sticky-info {
   display: flex;
   flex-direction: column;
