@@ -90,7 +90,7 @@
         "show_fake_counter": true,
         "show_sticky_bar": true,
         "sticky_text_color": "#ffffff",
-        "sticky_background_color": "#ffffff",
+        "sticky_background_color": "#131212",
         "fake_counter_text": "People are watching this product",
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
