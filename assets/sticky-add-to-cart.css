@@ -18,6 +18,9 @@
   .main-info h3 {
     display: none;
   }
+  .main-info {
+    margin: 0;
+  }
 }
 .sticky-container {
   display: flex;
