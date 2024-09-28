@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mostrar el spinner al hacer clic
     spinner.style.display = 'flex';
-    addToCartButton.disabled = true; // Desactivar el botón
+    addToCartButton.disabled = true;
+     addToCartButton.style.opacity = '0.5';
 
     fetch('/cart/add.js', {
       method: 'POST',
@@ -59,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => {
       console.log('Producto añadido al carrito:', data);
-      // Mostrar la notificación
       notification.style.display = 'block';
       setTimeout(() => {
         notification.style.display = 'none'; // Ocultar la notificación después de 3 segundos
@@ -69,8 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Error al añadir el producto al carrito:', error);
     })
     .finally(() => {
-      spinner.style.display = 'none'; // Ocultar el spinner
-      addToCartButton.disabled = false; // Activar el botón
+       spinner.style.display = 'none';
+        addToCartButton.disabled = false; 
+        addToCartButton.style.opacity = '1';
     });
   });
 });
