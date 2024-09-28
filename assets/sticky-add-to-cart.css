@@ -19,7 +19,7 @@
     display: none;
   }
   .main-info {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
   #stickyAddButton {
     width: 100%;
