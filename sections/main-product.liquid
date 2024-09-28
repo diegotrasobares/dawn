@@ -79,39 +79,49 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       {% if section.settings.show_sticky_bar %}
-        <div class="sticky-add-to-cart" id="stickyAddToCart">
-          <div class="sticky-container">
-            <img
-              class="sticky-image"
-              id="stickyVariantImage"
-              src="{{ product.featured_image | img_url: 'small' }}"
-              alt="{{ product.title }}"
+        <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+          {% if section.settings.show_sticky_bar %}
+            <div
+              class="sticky-add-to-cart"
+              id="stickyAddToCart"
+              style="background-color: {{ section.settings.sticky_background_color }};"
             >
+              <div class="sticky-container">
+                <img
+                  class="sticky-image"
+                  id="stickyVariantImage"
+                  src="{{ product.featured_image | img_url: 'small' }}"
+                  alt="{{ product.title }}"
+                >
 
-            <div class="sticky-info">
-              <div class="main-info">
-                <h3>{{ product.title }}</h3>
-                <span class="sticky-price">
-                  {% if product.compare_at_price > product.price %}
-                    <span class="discounted-price">{{ product.price | money }}</span>
-                    <span class="original-price">{{ product.compare_at_price | money }}</span>
-                  {% else %}
-                    <span class="price">{{ product.price | money }}</span>
-                  {% endif %}
-                </span>
+                <div class="sticky-info">
+                  <div class="main-info">
+                    <h3 style="color: {{ section.settings.sticky_text_color }};">{{ product.title }}</h3>
+                    <span class="sticky-price" style="color: {{ section.settings.sticky_text_color }};">
+                      {% if product.compare_at_price > product.price %}
+                        <span class="discounted-price">{{ product.price | money }}</span>
+                        <span class="original-price">{{ product.compare_at_price | money }}</span>
+                      {% else %}
+                        <span class="price">{{ product.price | money }}</span>
+                      {% endif %}
+                    </span>
+                  </div>
+
+                  <select id="stickyVariantSelect">
+                    {% for variant in product.variants %}
+                      <option value="{{ variant.id }}" data-image="{{ variant.image | img_url: 'small' }}">
+                        {{ variant.title }}
+                      </option>
+                    {% endfor %}
+                  </select>
+
+                  <button id="stickyAddButton" style="color: {{ section.settings.sticky_text_color }};">
+                    <p>Add To Cart</p>
+                  </button>
+                </div>
               </div>
-
-              <select id="stickyVariantSelect">
-                {% for variant in product.variants %}
-                  <option value="{{ variant.id }}" data-image="{{ variant.image | img_url: 'small' }}">
-                    {{ variant.title }}
-                  </option>
-                {% endfor %}
-              </select>
-
-              <button id="stickyAddButton"><p>Add To Cart</p></button>
             </div>
-          </div>
+          {% endif %}
         </div>
       {% endif %}
       <div class="grid__item product__media-wrapper">
