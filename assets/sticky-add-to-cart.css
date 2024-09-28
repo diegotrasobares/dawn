@@ -1,3 +1,4 @@
+/* Estilos previos para el sticky Add to Cart */
 .sticky-add-to-cart {
   position: fixed;
   bottom: 0;
@@ -24,11 +25,13 @@
   width: 50px;
   height: auto;
 }
+
 .main-info {
   display: flex;
   flex-direction: column;
   margin-right: 2rem;
 }
+
 .sticky-info {
   display: flex;
   gap: 2rem;
@@ -68,4 +71,37 @@
 
 #stickyAddButton:hover {
   background-color: #0077cc;
+}
+
+/* Nuevos estilos para cambiar la imagen de la variante seleccionada */
+/* Escondemos todas las imágenes de las variantes por defecto */
+.variant-image {
+  display: none;
+}
+
+/* Mostramos la imagen correspondiente cuando el input radio está seleccionado */
+.variant-radio:checked + label ~ .sticky-images .variant-image {
+  display: none; /* Ocultamos todas las imágenes de variantes primero */
+}
+
+#variant-{{ variant.id }}:checked + label ~ .sticky-images .variant-image-{{ variant.id }} {
+  display: block; /* Mostramos solo la imagen correspondiente */
+}
+
+/* Estilos para los radio buttons de selección de variante */
+.variant-options input[type="radio"] {
+  display: none;
+}
+
+.variant-options label {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+}
+
+/* Resalta la opción seleccionada con un color de fondo */
+.variant-options input[type="radio"]:checked + label {
+  background-color: #00aaff;
+  color: white;
 }
