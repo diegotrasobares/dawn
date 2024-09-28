@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   notification.style.position = 'fixed';
   notification.style.top = '20px';
   notification.style.right = '20px';
-  notification.style.backgroundColor = '#00aaff';
+  notification.style.backgroundColor = 'rgb(var(--color-foreground))';
   notification.style.color = 'white';
   notification.style.padding = '10px';
   notification.style.borderRadius = '5px';
