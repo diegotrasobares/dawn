@@ -80,10 +80,13 @@
   color: #fff;
   border: none;
   border-radius: var(--buttons-radius);
-  padding: 10px 20px;
   cursor: pointer;
+  padding: 10px 15px;
 }
 
+#stickyAddButton p {
+  margin: 0;
+}
 #stickyAddButton:hover {
   background-color: #0077cc;
 }
