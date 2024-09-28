@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Mostrar el sticky Add to Cart al hacer scroll
   const stickyAddToCart = document.getElementById('stickyAddToCart');
-  const productImage = document.querySelector('.product__media'); // Selector de la imagen del producto
+  const productImage = document.querySelector('.product__description'); // Selector de la imagen del producto
   const addToCartButton = document.getElementById('stickyAddButton');
   const variantSelect = document.getElementById('stickyVariantSelect');
 
   // Mostrar el sticky cuando se scrollea por debajo de la imagen del producto
   window.addEventListener('scroll', function () {
     const imageBottom = productImage.offsetTop + productImage.offsetHeight;
-    if (window.scrollY > imageBottom+1000) {
+    if (window.scrollY > imageBottom) {
       stickyAddToCart.style.display = 'flex'; // Mostrar el sticky
     } else {
       stickyAddToCart.style.display = 'none'; // Ocultar el sticky
