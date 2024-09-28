@@ -58,6 +58,8 @@
 
 #stickyVariantSelect {
   margin: 10px 0;
+  padding: 0.5rem 1rem;
+  border-radius: var(--buttons-radius);
 }
 
 #stickyAddButton {
