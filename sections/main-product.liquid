@@ -38,6 +38,8 @@
       }
     }
   {%- endstyle -%}
+  {{ 'sticky-add-to-cart.css' | asset_url | stylesheet_tag }}
+
   <script src="{{ 'sticky-add-to-cart.js' | asset_url }}" defer="defer"></script>
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
