@@ -11,6 +11,19 @@
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   align-items: center;
 }
+/* Estilo de la notificación */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00aaff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none; /* Ocultarlo por defecto */
+  z-index: 1001; /* Asegurarse de que esté sobre otros elementos */
+}
+
 @media screen and (max-width: 750px) {
   .sticky-image {
     display: none;
