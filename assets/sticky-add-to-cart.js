@@ -1,83 +1,39 @@
-/* Estilos para el sticky Add to Cart */
-.sticky-add-to-cart {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border-top: 1px solid #e1e1e1;
-  display: none; /* Hidden by default */
-  padding: 10px;
-  z-index: 1000;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  align-items: center;
-}
+document.addEventListener('DOMContentLoaded', function () {
+  const stickyAddToCart = document.getElementById('stickyAddToCart');
+  const productImage = document.querySelector('.product__description'); // Selector de la imagen del producto
+  const addToCartButton = document.getElementById('stickyAddButton');
+  const variantSelect = document.getElementById('stickyVariantSelect');
 
-.sticky-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 4rem;
-  margin: 0 auto;
-}
+  window.addEventListener('scroll', function () {
+    const imageBottom = productImage.offsetTop + productImage.offsetHeight;
+    if (window.scrollY > imageBottom) {
+      stickyAddToCart.style.display = 'flex'; // Mostrar el sticky
+    } else {
+      stickyAddToCart.style.display = 'none'; // Ocultar el sticky
+    }
+  });
 
-.sticky-image {
-  width: 50px;
-  height: auto;
-}
+  addToCartButton.addEventListener('click', function () {
+    const selectedVariantId = variantSelect.value;
 
-.sticky-info {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify({
+        id: selectedVariantId,
+        quantity: 1
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Producto añadido al carrito:', data);
 
-.sticky-price {
-  font-size: 16px;
-  color: #333;
-}
-
-.discounted-price {
-  color: #00aaff;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.original-price {
-  text-decoration: line-through;
-  color: #aaa;
-}
-
-#stickyAddButton {
-  background-color: #00aaff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#stickyAddButton:hover {
-  background-color: #0077cc;
-}
-
-/* Nuevos estilos para cambiar la imagen de la variante seleccionada */
-.variant-options input[type="radio"] {
-  display: none; /* Ocultar los radio buttons */
-}
-
-/* Estilo para los labels */
-.variant-options label {
-  cursor: pointer;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  margin-right: 5px;
-}
-
-/* Resaltar el label seleccionado */
-.variant-options input[type="radio"]:checked + label {
-  background-color: #00aaff;
-  color: white;
-}
+    })
+    .catch(error => {
+      console.error('Error al añadir el producto al carrito:', error);
+    });
+  });
+});
