@@ -105,14 +105,13 @@
               {% for variant in product.variants %}
                 <input
                   type="radio"
-                  id="variant-{{ variant.id }}"
                   name="variant"
+                  id="variant-{{ variant.id }}"
                   class="variant-radio"
                   value="{{ variant.id }}"
                   {% if forloop.first %}
                     checked
                   {% endif %}
-                  data-image="{{ variant.image | img_url: 'small' }}"
                 >
                 <label for="variant-{{ variant.id }}">{{ variant.title }}</label>
               {% endfor %}
