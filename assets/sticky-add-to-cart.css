@@ -37,15 +37,14 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: var(
-    --color-primary
-  ); /* Color de fondo de la notificación */
-  color: var(--color-text-light); /* Color del texto en la notificación */
+  background-color: {{ section.settings.sticky_background_color }}; /* Color de fondo del esquema */
+  color: white; /* Cambia esto si deseas usar una variable de color del esquema */
   padding: 10px;
   border-radius: 5px;
-  display: none; /* Ocultarlo por defecto */
-  z-index: 1001; /* Asegurarse de que esté sobre otros elementos */
+  display: none; /* Oculto por defecto */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
+
 
 @media screen and (max-width: 750px) {
   .sticky-image {
