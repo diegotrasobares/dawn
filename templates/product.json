@@ -91,7 +91,7 @@
         "show_sticky_bar": true,
         "sticky_text_color": "#000000",
         "sticky_background_color": "#ffffff",
-        "notification_background_color": "#000000",
+        "notification_background_color": "#3d3d3d",
         "fake_counter_text": "People are watching this product",
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
