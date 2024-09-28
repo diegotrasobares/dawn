@@ -82,15 +82,17 @@
         <div class="sticky-container">
           <img class="sticky-image" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
           <div class="sticky-info">
-            <h3>{{ product.title }}</h3>
-            <span class="sticky-price">
-              {% if product.compare_at_price > product.price %}
-                <span class="discounted-price">{{ product.price | money }}</span>
-                <span class="original-price">{{ product.compare_at_price | money }}</span>
-              {% else %}
-                <span class="price">{{ product.price | money }}</span>
-              {% endif %}
-            </span>
+            <div class="main-info">
+              <h3>{{ product.title }}</h3>
+              <span class="sticky-price">
+                {% if product.compare_at_price > product.price %}
+                  <span class="discounted-price">{{ product.price | money }}</span>
+                  <span class="original-price">{{ product.compare_at_price | money }}</span>
+                {% else %}
+                  <span class="price">{{ product.price | money }}</span>
+                {% endif %}
+              </span>
+            </div>
             <select id="stickyVariantSelect">
               {% for variant in product.variants %}
                 <option value="{{ variant.id }}">{{ variant.title }}</option>
