@@ -100,7 +100,6 @@
               </span>
             </div>
 
-            <!-- Selector de variantes con imagen usando radio buttons -->
             <select id="stickyVariantSelect">
               {% for variant in product.variants %}
                 <option value="{{ variant.id }}" data-image="{{ variant.image | img_url: 'small' }}">
