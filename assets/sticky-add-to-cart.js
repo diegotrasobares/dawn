@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => {
       console.log('Producto añadido al carrito:', data);
-
+      // Opcional: Actualizar el número de productos en el carrito
+      // window.location.href = '/cart'; // Redireccionar al carrito si se desea
     })
     .catch(error => {
       console.error('Error al añadir el producto al carrito:', error);
