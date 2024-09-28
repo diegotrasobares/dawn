@@ -61,7 +61,7 @@
 }
 
 #stickyAddButton {
-  background-color: #00aaff;
+  background-color: rgb(var(--color-foreground));
   color: #fff;
   border: none;
   padding: 10px 20px;
