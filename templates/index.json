@@ -214,7 +214,7 @@
         "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
         "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg",
         "background_color": "#ffffff",
-        "highlight_color": "#b43636",
+        "highlight_color": "#cfe1ff",
         "section_background_color": "#f9f9f9"
       }
     },
