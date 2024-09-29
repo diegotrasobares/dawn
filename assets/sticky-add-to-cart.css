@@ -33,7 +33,7 @@
 }
 
 /* Estilo de la notificación */
-.notification {
+.sticky-notification {
   position: fixed;
   top: 20px;
   right: 20px;
