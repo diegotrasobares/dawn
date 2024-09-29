@@ -37,7 +37,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: {{ section.settings.sticky_background_color }}; /* Color de fondo del esquema */
+  background-color: {{  section.settings.notification_background_color }}; /* Color de fondo del esquema */
   color: white; /* Cambia esto si deseas usar una variable de color del esquema */
   padding: 10px;
   border-radius: 5px;
