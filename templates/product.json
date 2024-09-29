@@ -17,12 +17,6 @@
           "settings": {
           }
         },
-        "fake_counter_zbtMEV": {
-          "type": "fake_counter",
-          "settings": {
-            "fake_counter_text": "personas están viendo este producto"
-          }
-        },
         "rating_PyMGci": {
           "type": "rating",
           "settings": {
@@ -59,6 +53,12 @@
             "show_gift_card_recipient": true
           }
         },
+        "fake_counter_zbtMEV": {
+          "type": "fake_counter",
+          "settings": {
+            "fake_counter_text": "people are watching this product"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -79,13 +79,13 @@
       },
       "block_order": [
         "title",
-        "fake_counter_zbtMEV",
         "rating_PyMGci",
         "caption",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "fake_counter_zbtMEV",
         "description",
         "icon_with_text_ADWWLR"
       ],
