@@ -122,14 +122,14 @@
                 </div>
 
                 <!-- Notificación -->
-                <div
-                  id="notification"
-                  class="sticky-notification"
-                  style="display: none; background-color: {{ section.settings.notification_background_color }}; "
-                >
-                  {{ section.settings['notification-text'] }}
-                </div>
               </div>
+            </div>
+            <div
+              id="notification"
+              class="sticky-notification"
+              style="display: none; background-color: {{ section.settings.notification_background_color }}; "
+            >
+              {{ section.settings['notification-text'] }}
             </div>
           {% endif %}
         </div>
