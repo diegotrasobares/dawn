@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
   addToCartButton.addEventListener('click', function () {
     const selectedVariantId = variantSelect.value;
 
-    // Eliminar el párrafo dentro del botón y mostrar el spinner
     const addToCartText = addToCartButton.querySelector('p');
     if (addToCartText) {
       addToCartText.style.display = 'none'; // Ocultar el texto del botón
