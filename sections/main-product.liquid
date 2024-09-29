@@ -533,13 +533,16 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-                {% if section.settings.show_fake_counter %}
-                  <script src="{{ 'fake-counter.js' | asset_url }}" defer="defer"></script>
-                  <div class="fake-counter">
-                    <img src="{{ 'eye.gif' | asset_url }}" alt="Live view" width="30" height="30">
-                    <p><strong class="counter-number"></strong> {{ section.settings.fake_counter_text }}</p>
-                  </div>
-                {% endif %}
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'fake_counter' %}
+                      <script src="{{ 'fake-counter.js' | asset_url }}" defer="defer"></script>
+                      <div class="fake-counter">
+                        <img src="{{ 'eye.gif' | asset_url }}" alt="Live view" width="30" height="30">
+                        <p><strong class="counter-number"></strong> {{ block.settings.fake_counter_text }}</p>
+                      </div>
+                  {% endcase %}
+                {% endfor %}
 
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
