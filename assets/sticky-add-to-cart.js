@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const spinner = document.createElement('div'); // Crear el spinner
   const pageHeader = document.querySelector('header'); // Seleccionar el encabezado de la página
 
-  // Estilo para el spinner
   spinner.className = 'spinner';
   spinner.style.display = 'none'; // Ocultarlo por defecto
   spinner.style.width = '20px';
@@ -54,15 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       console.log('Producto añadido al carrito:', data);
 
-      // Mostrar la notificación
       notification.style.display = 'block';
       
-      // Hacer scroll hacia el encabezado
       if (pageHeader) {
-        pageHeader.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente hasta el encabezado
+        pageHeader.scrollIntoView({ behavior: 'smooth' }); 
       }
 
-      // Ocultar la notificación después de 3 segundos
       setTimeout(() => {
         notification.style.display = 'none';
       }, 3000);
