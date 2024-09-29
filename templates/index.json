@@ -158,6 +158,29 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_jkEKnC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gTBbhm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>FOCUS™</strong> Difference",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gTBbhm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
     "comparison_table_dqpCyB": {
       "type": "comparison-table",
       "blocks": {
@@ -191,30 +214,8 @@
         "icon_check": "shopify://shop_images/check-circle-svgrepo-com_1.svg",
         "icon_x": "shopify://shop_images/close-circle-svgrepo-com.svg",
         "background_color": "#ffffff",
+        "highlight_color": "#b43636",
         "section_background_color": "#f9f9f9"
-      }
-    },
-    "rich_text_jkEKnC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_gTBbhm": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>FOCUS™</strong> Difference",
-            "heading_size": "h0"
-          }
-        }
-      },
-      "block_order": [
-        "heading_gTBbhm"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 20
       }
     },
     "image_with_text_NzHHgX": {
