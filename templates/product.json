@@ -17,6 +17,12 @@
           "settings": {
           }
         },
+        "fake_counter_zbtMEV": {
+          "type": "fake_counter",
+          "settings": {
+            "fake_counter_text": "personas están viendo este producto"
+          }
+        },
         "rating_PyMGci": {
           "type": "rating",
           "settings": {
@@ -73,6 +79,7 @@
       },
       "block_order": [
         "title",
+        "fake_counter_zbtMEV",
         "rating_PyMGci",
         "caption",
         "price",
@@ -87,11 +94,11 @@
         "color_scheme": "",
         "media_size": "small",
         "constrain_to_viewport": true,
-        "show_fake_counter": true,
         "show_sticky_bar": true,
         "sticky_text_color": "#000000",
         "sticky_background_color": "#ffffff",
         "notification_background_color": "#3d3d3d",
+        "notification-text": "Item has been added to cart!",
         "fake_counter_text": "People are watching this product",
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
