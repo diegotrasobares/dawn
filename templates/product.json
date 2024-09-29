@@ -99,7 +99,6 @@
         "sticky_background_color": "#ffffff",
         "notification_background_color": "#3d3d3d",
         "notification-text": "Item has been added to cart!",
-        "fake_counter_text": "People are watching this product",
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
         "media_position": "left",
@@ -164,6 +163,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "<strong>YOU MAY ALSO LIKE</strong>",
         "heading_size": "h1",
