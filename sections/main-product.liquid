@@ -539,7 +539,6 @@
                   <img src="{{ 'eye.gif' | asset_url }}" alt="Live view" width="30" height="30">
                   <p><strong class="counter-number"></strong> {{ block.settings.fake_counter_text }}</p>
                 </div>
-                -%}
 
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
@@ -2235,14 +2234,7 @@
         "label": "Notification Text",
         "default": "Item has been added to cart!"
       },
-
-{
-  "type": "text",
-  "id": "fake_counter_text",
-  "label": "Fake Counter Text",
-  "default": "personas están viendo este producto"
-},
-    {
+ {
       "type": "select",
       "id": "media_fit",
       "options": [
