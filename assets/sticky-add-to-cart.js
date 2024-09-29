@@ -56,16 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Mostrar la notificación
       notification.style.display = 'block';
-      
+
       // Hacer scroll hacia el encabezado
       if (pageHeader) {
-        pageHeader.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente hasta el encabezado
+        pageHeader.scrollIntoView({ behavior: 'smooth' });
+
+        // Usar un setTimeout para ocultar la notificación solo después de que termine el scroll (esperamos un poco)
+        setTimeout(() => {
+          notification.style.display = 'none'; // Ocultar la notificación después de 3 segundos
+        }, 3000); // Espera hasta que el scroll haya terminado y después oculta la notificación
       }
 
-      // Ocultar la notificación después de 3 segundos
-      setTimeout(() => {
-        notification.style.display = 'none';
-      }, 3000);
     })
     .catch(error => {
       console.error('Error al añadir el producto al carrito:', error);
