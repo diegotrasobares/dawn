@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const variantSelect = document.getElementById('stickyVariantSelect');
   const notification = document.getElementById('notification'); // Seleccionar el div de notificación existente
   const spinner = document.createElement('div'); // Crear el spinner
+  const pageHeader = document.querySelector('header'); // Seleccionar el encabezado de la página
 
   // Estilo para el spinner
   spinner.className = 'spinner';
@@ -52,9 +53,18 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => {
       console.log('Producto añadido al carrito:', data);
-      notification.style.display = 'block'; // Mostrar la notificación existente
+
+      // Mostrar la notificación
+      notification.style.display = 'block';
+      
+      // Hacer scroll hacia el encabezado
+      if (pageHeader) {
+        pageHeader.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente hasta el encabezado
+      }
+
+      // Ocultar la notificación después de 3 segundos
       setTimeout(() => {
-        notification.style.display = 'none'; // Ocultar la notificación después de 3 segundos
+        notification.style.display = 'none';
       }, 3000);
     })
     .catch(error => {
