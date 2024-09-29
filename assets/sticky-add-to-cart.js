@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const spinner = document.createElement('div'); // Crear el spinner
   const pageHeader = document.querySelector('header'); // Seleccionar el encabezado de la página
 
+  // Estilo para el spinner
   spinner.className = 'spinner';
   spinner.style.display = 'none'; // Ocultarlo por defecto
   spinner.style.width = '20px';
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   addToCartButton.addEventListener('click', function () {
     const selectedVariantId = variantSelect.value;
 
+    // Eliminar el párrafo dentro del botón y mostrar el spinner
     const addToCartText = addToCartButton.querySelector('p');
     if (addToCartText) {
       addToCartText.style.display = 'none'; // Ocultar el texto del botón
@@ -52,15 +54,22 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => {
       console.log('Producto añadido al carrito:', data);
 
-      notification.style.display = 'block';
-            setTimeout(() => {
-        notification.style.display = 'none';
-      }, 3000);
+      // Hacer scroll hacia el encabezado
       if (pageHeader) {
-        pageHeader.scrollIntoView({ behavior: 'smooth' }); 
+        pageHeader.scrollIntoView({ behavior: 'smooth' });
+
+        // Esperar a que el scroll haya terminado (usar un setTimeout para esperar el tiempo del scroll)
+        setTimeout(() => {
+          // Mostrar la notificación solo después de que el scroll haya terminado
+          notification.style.display = 'block';
+          
+          // Ocultar la notificación después de 3 segundos
+          setTimeout(() => {
+            notification.style.display = 'none';
+          }, 3000);
+
+        }, 1000); // Tiempo de espera del scroll (puedes ajustarlo según la duración esperada del scroll)
       }
-
-
     })
     .catch(error => {
       console.error('Error al añadir el producto al carrito:', error);
