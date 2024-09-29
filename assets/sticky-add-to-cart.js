@@ -53,14 +53,14 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('Producto añadido al carrito:', data);
 
       notification.style.display = 'block';
-      
+            setTimeout(() => {
+        notification.style.display = 'none';
+      }, 3000);
       if (pageHeader) {
         pageHeader.scrollIntoView({ behavior: 'smooth' }); 
       }
 
-      setTimeout(() => {
-        notification.style.display = 'none';
-      }, 3000);
+
     })
     .catch(error => {
       console.error('Error al añadir el producto al carrito:', error);
