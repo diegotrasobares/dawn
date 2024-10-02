@@ -2906,10 +2906,12 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__menu-item span.header__active-menu-item {
-  border: 1px solid white;
-  border-radius: 20px;
   padding: 5px 20px 5px 20px;
   opacity: 1;
+}
+.float-style {
+  border: 1px solid white;
+  border-radius: 20px;
   border-color: var(--hd_menu_color_border);
   background: var(--hd_menu_color_bg);
 }
