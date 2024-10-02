@@ -26,14 +26,12 @@
     align-items: center;
   }
 
-  .content-wrapper h2 {
-    font-size: 3rem;
+  .content-wrapper h1 {
     margin-bottom: 20px;
     color: {{ section.settings.title_color }}; /* Color del título */
   }
 
   .content-wrapper p {
-    font-size: 1.2rem;
     color: {{ section.settings.paragraph_color }}; /* Color del párrafo */
   }
 {%- endstyle -%}
@@ -43,7 +41,7 @@
   style="background-image: url('{{ section.settings.background_image | image_url: width: 1600 }}');"
 >
   <div class="content-wrapper">
-    <h2>{{ section.settings.title }}</h2>
+    <h1>{{ section.settings.title }}</h1>
     <p>{{ section.settings.paragraph }}</p>
   </div>
 </div>
