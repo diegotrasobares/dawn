@@ -2909,13 +2909,13 @@ details[open] > .header__menu-item .icon-caret {
   padding: 5px 20px 5px 20px;
   opacity: 1;
 }
-.float-style {
-  header__menu-item span.header__active-menu-item {
-    border: 1px solid white;
-    border-radius: 20px;
-    border-color: var(--hd_menu_color_border);
-    background: var(--hd_menu_color_bg);
-  }
+.float-style .header__menu-item span.header__active-menu-item {
+  border: 1px solid white;
+  border-radius: 20px;
+  border-color: var(--hd_menu_color_border);
+  background-color: var(
+    --hd_menu_color_bg
+  ); /* Usa background-color en lugar de background */
 }
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
