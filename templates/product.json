@@ -110,6 +110,17 @@
         "padding_bottom": 12
       }
     },
+    "home_parallax_hHCWbY": {
+      "type": "home-parallax",
+      "settings": {
+        "background_image": "shopify://shop_images/photo-1525065970969-a1b6fa9a0e53.jpg",
+        "title": "Time to take off!",
+        "paragraph": "Discover amazing views with the new FOCUS Drone.",
+        "title_color": "#ffffff",
+        "paragraph_color": "#000000",
+        "text_color": "#ffffff"
+      }
+    },
     "collapsible_content_nkhTbW": {
       "type": "collapsible-content",
       "blocks": {
@@ -179,23 +190,12 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "home_parallax_hHCWbY": {
-      "type": "home-parallax",
-      "settings": {
-        "background_image": "shopify://shop_images/photo-1525065970969-a1b6fa9a0e53.jpg",
-        "title": "Time to take off!",
-        "paragraph": "Discover amazing views with the new FOCUS Drone.",
-        "title_color": "#0e0e0e",
-        "paragraph_color": "#000000",
-        "text_color": "#ffffff"
-      }
     }
   },
   "order": [
     "main",
+    "home_parallax_hHCWbY",
     "collapsible_content_nkhTbW",
-    "related-products",
-    "home_parallax_hHCWbY"
+    "related-products"
   ]
 }
