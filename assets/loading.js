@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Seleccionar la pantalla de carga
     const loadingScreen = document.getElementById("loading-screen");
-
     // Ocultar la pantalla de carga al cargar la página
     function hideLoadingScreen() {
         loadingScreen.classList.add("hidden");
+          console.log("loading screen hidden")
+
     }
 
     // Mostrar la pantalla de carga antes de salir de la página
     function showLoadingScreen() {
         loadingScreen.classList.remove("hidden");
+                console.log("loading screen SHOWN")
+
     }
 
     // Ocultar la pantalla de carga cuando el contenido esté listo
@@ -19,11 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function(e) {
             const href = link.getAttribute("href");
-
-            // Si el enlace lleva a una nueva página, muestra la pantalla de carga
-            if (href && !href.startsWith("#") && !link.target) {
-                showLoadingScreen();
-            }
         });
     });
 
