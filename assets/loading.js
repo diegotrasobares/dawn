@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Ocultar la pantalla de carga cuando el contenido esté listo
-    hideLoadingScreen();
+    showLoadingScreen();
 
     // Agregar el evento para mostrar la pantalla de carga en los enlaces
     document.querySelectorAll("a").forEach(link => {
