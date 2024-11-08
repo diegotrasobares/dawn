@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Seleccionar la pantalla de carga
     const loadingScreen = document.getElementById("loading-screen");
 
-    // Ocultar la pantalla de carga al cargar la página
+    // Función para ocultar la pantalla de carga
     function hideLoadingScreen() {
         loadingScreen.classList.add("hidden");
     }
 
-    // Mostrar la pantalla de carga antes de salir de la página
+    // Función para mostrar la pantalla de carga
     function showLoadingScreen() {
         loadingScreen.classList.remove("hidden");
     }
@@ -15,18 +15,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ocultar la pantalla de carga cuando el contenido esté listo
     hideLoadingScreen();
 
-    // Agregar el evento para mostrar la pantalla de carga en los enlaces
+    // Escuchar clicks en los enlaces para mostrar la pantalla de carga
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function(e) {
             const href = link.getAttribute("href");
 
-            // Si el enlace lleva a una nueva página, muestra la pantalla de carga
+            // Solo muestra la pantalla de carga si el enlace es interno
             if (href && !href.startsWith("#") && !link.target) {
                 showLoadingScreen();
             }
         });
     });
 
-    // Ocultar la pantalla de carga nuevamente al cargar la nueva página
+    // Shopify AJAX navigation: manejar el evento de cambio de página
+    document.addEventListener("shopify:section:load", hideLoadingScreen);
+    document.addEventListener("shopify:section:unload", showLoadingScreen);
+
+    // Escuchar cuando la nueva página esté lista (para la navegación AJAX)
     window.addEventListener("pageshow", hideLoadingScreen);
 });
