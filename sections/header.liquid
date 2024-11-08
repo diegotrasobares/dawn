@@ -289,9 +289,14 @@
         {%- endif -%}
       </a>
     </div>
-    <div id="loading-screen">
-    <div class="loading-icon"></div>
+<div id="loading-screen">
+    <img 
+        src="{{ settings.logo | img_url: '200x' }}" 
+        alt="loading logo" 
+        class="loading-logo"
+    >
 </div>
+
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
