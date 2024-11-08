@@ -318,7 +318,6 @@
         });
       });
     </script>
-    <link rel="stylesheet" href="{{ 'loading.css' | asset_url }}">
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -418,6 +417,5 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script src="{{ 'loading.js' | asset_url }}"></script>
   </body>
 </html>
