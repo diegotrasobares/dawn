@@ -22,8 +22,9 @@
 
 /* Logo de carga con efecto de respiro */
 .loading-logo {
-  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  width: 120px; /* Ajusta el tamaño según tus necesidades */
   height: auto;
+  background-color: black;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
